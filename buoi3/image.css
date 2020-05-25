@@ -1,0 +1,121 @@
+.container{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.left{
+    width: 40%;
+    float: left;
+    
+
+}
+.right{
+    width: 60%;
+    float: left;
+    
+    
+}
+.special{
+    width: 90%;
+    border: 1px solid red;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.lager-image{
+    width:400px;
+    height: 300px;
+    /* background-color: blue; */
+    margin: 0 auto;
+    text-align: center;
+}
+.lager-image::after{
+    content: 'Sầu Riêng';
+    justify-content: center;
+}
+.content {
+    width: 70%;
+    margin: 0 auto;  
+    
+    margin-bottom: 10px;
+}
+.content p{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 10px;
+}
+.content span{
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    
+}
+
+.small-image{
+    
+    width: 150px;
+    height: 150px;
+    /* display: flex;
+    justify-content: center; */
+    margin: auto;
+}
+.content2{
+    width: 210px;
+    /* background-color: red      ; */
+    float: left;
+    margin:15px 11px;
+    padding-top: 5px;
+    text-align: center;
+}
+.product{
+    width: 80%;
+    margin: 0 auto;
+
+}
+.product p{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 5px;
+    
+}
+.product span{
+    display: block;
+    text-align: center;
+}
+.btn {
+    width: 100%;
+   
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    
+    
+}
+.btn a{
+    text-decoration: none;
+    line-height: 60px;
+    padding: 15px 35px 15px 35px;
+    border-radius:30px ;
+    background-color:#f1c40f;
+    font-size: 20px;
+    color: white;
+    
+}
+.btn a:hover{
+    background-color:#d35400 ;
+    
+}
+.tao::after {
+    content: 'Tao nu hoang';
+}
+.hong::after {
+    content: 'Hong Han Quoc';
+}
+.taogala::after
+{
+    content: 'Tao Gala';
+}

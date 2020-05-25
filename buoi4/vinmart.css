@@ -1,0 +1,226 @@
+body{
+    padding-top: 70px;
+    background-color: #dfe6e9;
+    position: relative;
+}
+.header
+{
+    background-color: red;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+}
+.nav-bar{
+   
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.btn-search{
+    padding: 8px 8px;
+    border: none;
+    border-left: 1px solid black;
+    background-color: white;
+    outline: none;
+    margin-left: -2px;
+}
+.btn-search:hover{
+    background-color: #dfe6e9;
+}
+.btn-search-content{
+    font-size: 12px;
+}
+.between{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.small-icon-nav{
+    
+    color: white;
+    font-size: 25px; 
+    display: inline-block;
+}
+.logo{
+    width: 20%;
+    height: 50px;
+    float: left;
+    margin-left: -30px;
+
+}
+
+.search-box{
+    
+    width: 38%;
+    float: left;
+    padding: 10px 10px;
+    
+}
+.input-box{
+    width: 77.4%;
+    height: 20px;
+    padding: 3px 15px 3px 15px ;
+    border: none;
+    background: none;
+    outline: none;
+    
+}
+
+.input{
+    background-color:white;
+    height: 30px;
+    padding: 0;
+    width: 100%;
+}
+.contact{
+    width: 40%;
+
+    height: 50px;
+    float: right;
+    
+}
+.clear-fix{
+    clear: both;
+}
+.infor{
+    margin:6px 0;
+    width: 30%;
+    /* background-color: rebeccapurple; */
+    float: left;
+    padding: 10px 5px;
+    font-size: 18px;
+}
+.infor a{
+    text-decoration: none;
+    
+}
+.icon-search{
+    font-size: 20px;
+    border: 1px solid white;
+    padding: 2px 6px;
+    color: red;
+    background-color: white;
+    display: inline-block;
+    margin: 0;
+    
+}
+.icon-contact{  
+    text-decoration: none;
+    color: white;
+}
+
+.btn{
+    width: 100%;
+    padding: 0 2px;
+    height: 50px;
+    border: none;
+    border-top: 2px solid red;
+    outline: none;
+    
+}
+.khau-hieu{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.type-food{
+    font-size: 30px;
+    color: red;
+    margin-left: 10px;
+    font-weight: 540;
+    margin-bottom: 10px;
+    display: block;
+    margin-top: 20px;
+
+}
+.product{
+    width: 100%;
+    background-color: white;
+    padding-top: 10px;
+}
+.product-infor{
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    width: 246px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.name-product{
+    height: 36px;
+}
+.price{
+   display: block;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.product-infor:hover{
+    box-shadow: 0px 5px 15px 1px #b2bec3 ;
+}
+.product-btn{
+    
+    width: 100%;
+    height: 35px;
+    background-color: red;
+    color: white;
+    outline: none;
+    border: none;
+}
+.content-btn{
+    font-weight: 600;
+    
+}
+
+.footer{
+    width: 100%;
+    margin-top: 20px;
+    border-top: 2px solid red;
+    background-color: white;
+}
+.img{
+    width: 80%;
+    margin: 0 auto;
+}
+.footer-img{
+    width: 100px;
+    height: 100px;
+    padding: 30px 90px;
+    position: relative;
+    display: inline-block;
+}
+.btn-scrollTop{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+.img2{  
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    overflow: hidden;
+    /* margin-top: -100px; */
+    width: 246px;
+    height: 246px;
+    margin-left: 15px;
+    margin-top:10px ;
+    
+}
+.product-img{
+    width: 246px;
+    height: 246px;
+}
+.img2:hover{
+    opacity: 1;
+    transition: 0.5 ease-in-out;
+}
+.btn-top{
+    padding: 3px 20px;
+}

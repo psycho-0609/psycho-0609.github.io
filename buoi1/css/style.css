@@ -1,0 +1,34 @@
+
+span{
+    color: green;
+    border: 1px solid #bdc3c7;
+    background-color: #ecf0f1;
+}
+p{
+    font-size: 17px;
+}
+h1{
+    color: #27ae60;
+    border: 1px solid #1abc9c;
+    background-color:rgba(26, 188, 156,0.5);
+    text-align: center;
+}
+#red{
+    border: none;
+    background-color: inherit;
+    color: red;
+}
+#green{
+    border: none;
+    background-color: inherit;
+    color:blue;
+}
+#para-html{
+    background-color: rgba(214, 162, 232,0.7);
+}
+#para-css{
+    background-color: #FEA47F;
+}
+.para-js{
+    background-color: yellow;
+}

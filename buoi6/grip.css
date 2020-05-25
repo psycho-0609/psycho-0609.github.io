@@ -1,0 +1,10 @@
+.grip-item{
+    border: solid 1px black;
+    
+}
+.grip-container{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    grid-template-rows: 80px 200px;
+    justify-content: space-evenly;
+}
