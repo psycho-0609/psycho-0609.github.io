@@ -1,0 +1,204 @@
+*, *::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto";
+    background-color: #F2F2F2;
+    height: 100vh;
+    padding-top:100px;
+}
+.card__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.card{
+    width: 304px;
+    background-color: white;
+    padding: 16px;
+    margin: 10px;
+}
+.card__icon{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    
+}
+.card__icon span{
+    color: #bfc5d1;
+}
+.card__icon span:hover{
+    color: red;
+}
+.card__thumbnail img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.card__infor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.name{
+    font-size: 18px;
+    color: #1b2437;
+    margin: 16px 0;
+    font-weight: 500;
+    
+}
+.email{
+    font-size: 14px;
+    color: #98a0a6;
+    font-weight: 500;
+    
+}
+.card__btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.card__btn button{
+    flex-basis: 48%;
+    background-color: white;
+    border: none;
+    padding: 10px 0;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__btn button:hover{
+    background-color: blue;
+}
+
+.btn__icon{
+    color: #bfc5d1;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.btn__name{
+    color: #bfc5d1;
+    font-size: 14px;
+}
+.card__btn button:hover .btn__name,
+.card__btn button:hover .btn__icon{
+    color: white;
+   
+}
+.header{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 29px;
+    margin-bottom: 20px;
+}
+.left{
+    display: flex;
+    width: 12%;
+    justify-content: space-between; 
+}
+
+.icon__rocket{
+    padding: 6px 8px;
+    background-color: blue;
+    color:white;
+    border-radius: 3px;
+    display: block;
+}
+.left__title span{
+    display: block;
+}
+.title__large{
+    font-weight: 550;
+    
+}
+.title__small{
+    font-size: 10px;
+    color: #94969A;
+}
+.right{
+    display: flex;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: -1px 0px 1px 1px #94969A;
+}
+.right button{
+    width: 100px;
+    border-radius: 30px;
+    border: none;
+}
+.btn__all{
+    background-color: blue;
+    color: white;
+}
+.btn__team{
+    background-color: white;
+    color: #94969A;
+}
+.nav__bar{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.title{
+    font-size: 18px;
+}
+.icon__search{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.input__search{
+    width:700px;
+    padding: 5px;
+    outline: none;
+    border: 1px solid rgba(178, 190, 195,0.5);
+    background: none;
+
+}
+.nav__image{
+    width: 35px;
+    height: auto;
+}
+.nav__infor{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__bar img
+{
+    border-radius: 50%;
+}
+.nav__name{
+    font-size: 13px;
+    color: #98A0A6;
+}
+.nav__icon{
+    color: #98A0A6;
+}
+
