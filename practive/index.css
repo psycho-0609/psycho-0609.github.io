@@ -92,7 +92,7 @@ img{
 }
 
 .item:hover{
-    box-shadow: 0 0 30px 5px gray;
+    box-shadow: 0 0 10px 5px gray;
 }
 .link{
     margin-top: 10px;
