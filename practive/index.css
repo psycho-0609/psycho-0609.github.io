@@ -92,7 +92,11 @@ img{
 }
 
 .item:hover{
+<<<<<<< HEAD
     box-shadow: 0 0 10px 5px gray;
+=======
+    box-shadow: 0 0 10px 3px gray;
+>>>>>>> b0d9890c77ea17dd132f94d31ffbefa921b838d4
 }
 .link{
     margin-top: 10px;
