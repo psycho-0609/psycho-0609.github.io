@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #canvas {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById("canvas");
+    const c = canvas.getContext('2d');
+
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+
+    function draw() {
+      canvas.width = innerWidth*0.9; // đặt độ dài  cho canvas
+      canvas.height = innerHeight*0.9; // đăt chiều cao cho canvas
+      c.clearRect(0, 0, canvas.width, canvas.height); 
+      c.beginPath(); 
+      c.rect(0, 0, canvas.width, canvas.height); // vẽ hình vuông
+      c.lineWidth = "20"; 
+      c.strokeStyle = "red"; //
+      c.stroke();
+      c.beginPath();
+      c.moveTo(0,0); // điểm vẽ bắt đầu từ góc trên bên trái
+      c.lineWidth = "10";
+      c.strokeStyle = "green";
+      c.lineTo(canvas.width,canvas.height); // điểm vẽ kết thúc
+      c.stroke();
+      
+      c.beginPath(); 
+      c.moveTo(0,canvas.height);// điểm bắt đầu vẽ line 
+      c.lineTo(canvas.width,0); // điểm kết thúc
+      c.stroke(); // vẽ
+
+     
+
+    }
+    draw();
+    addEventListener("resize", () => draw());
+
+
+  </script>
+</body>
+
+</html>
