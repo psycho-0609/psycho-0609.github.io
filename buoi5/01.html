@@ -38,9 +38,9 @@
         move() {
         this.y -= 4; 
         if (this.y + this.radius <= this.radius) {
-        //nếu vượt quá cạnh phải màn hình thì quay lại từ cạnh bên trái
-        this.y = canvas.height-this.radius;
-        this.x =randomIntFromRange(this.radius+1,canvas.width-this.radius);
+        //nếu vượt quá màn hình thì bắt đầu lại từ dưới màn hình
+        this.y = canvas.height-this.radius; // 
+        this.x =randomIntFromRange(this.radius+1,canvas.width-this.radius); // random điểm x
         }
         this.draw();
     }
@@ -53,36 +53,37 @@
                 c.stroke();
                 c.closePath();
                 
-                
-               
             }
         }
         
 
 
-        let balls = [];
+        let balls = []; // mảng chứa cac object bóng
         function generateBall(N) {
             for (let i = 0; i <= N; i++) {
                 balls.push(new Ball(
-                    randomIntFromRange(30, canvas.width - 20),
-                    randomIntFromRange(30, canvas.height - 20),
-                    randomIntFromRange(25, 30),
-                    randomIntFromRange(2, 3),
-                    randomIntFromRange(2, 3),
-                    rgb()));
+                    randomIntFromRange(30, canvas.width - 20),// x
+                    randomIntFromRange(30, canvas.height - 20),//y
+                    
+                    randomIntFromRange(25, 30),//radius
+                    randomIntFromRange(2, 3),//dx
+                    randomIntFromRange(2, 3),//dy
+                    rgb())); /// đối tượng bóng
             }
         }
         addEventListener("click", function (event) {
     
         let i = balls.length-1;
+        /// nổ bóng
         while(i>=0)
         {
             let ball = balls[i];
             if(Math.pow((event.clientX - ball.x),2) + Math.pow((event.clientY - ball.y),2) < Math.pow(ball.radius,2)){
+               //kiểm tra xem chỏ chuột nằm trong tâm bóng
                 var x = document.getElementById("ball_hit");
                 x.play();
                 balls.splice(i,1); 
-               
+               // nếu đúng thì nổ bỏng và phát ra tiếng
                 return;
             }
             i--;
@@ -113,7 +114,7 @@
             }
             return color.replace(/\,$/, ')');
         }
-        function animate() {
+        function animate() {///các object bóng di chuyển
             requestAnimationFrame(animate);
             c.clearRect(0, 0, canvas.width, canvas.height);
             for (i = 0; i < balls.length; i++) {
