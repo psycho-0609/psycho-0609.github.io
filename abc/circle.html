@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<html>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        let canvas = document.getElementById("canvas");
+        let c = canvas.getContext('2d');
+
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+
+        addEventListener("resize", () => {
+            canvas.width = innerWidth;
+            canvas.height = innerHeight;
+        });
+
+        class Squares {
+            constructor(centerx, centery, width, color, rotate) {
+                this.centerx = centerx;
+                this.centery = centery;
+                this.rect_width = width;
+                this.color = color;
+                this.rotate = rotate
+            }
+            draw() {
+                
+                c.fillStyle = this.color;
+
+                if (!this.rotate) { 
+                    c.beginPath();
+                    c.arc( this.centerx,this.centery, this.rect_width,0,Math.PI * 2,false);
+                    c.fill();
+                    
+                } else {
+                    
+                    c.save();
+                    c.translate(this.centerx, this.centery);
+                    c.fillRect(-this.rect_width/2, -this.rect_width/2 , this.rect_width, this.rect_width); 
+                    c.restore();
+                    
+                }
+                c.stroke();
+
+            }
+        }
+        let squares = [];
+        let x;
+        let color;
+        let y = 300; 
+        let check; 
+        let centerx = canvas.width / 2; 
+        let centery = canvas.height / 2;
+        function generateSquad(N) { 
+            for (let i = 0; i < N; i++) {
+                if (i % 2 == 0 || i == 0) { 
+                    color = "#4472C4";
+                    x = y;
+                    check = false;
+                }
+                else { 
+                    color = "red";
+                    x = y*2 / 1.414;
+                    y/=1.414;
+                    check = true;
+
+                }
+                squares.push(new Squares(centerx, centery, x,rgb() , check));
+            }
+        }
+        function rgb() {
+            color = 'rgb(';
+            for (var i = 0; i < 3; i++) {
+                color += Math.floor(Math.random() * 255) + ',';
+            }
+            return color.replace(/\,$/, ')');
+        }
+        function animate() {
+            requestAnimationFrame(animate);
+            c.clearRect(0, 0, canvas.width, canvas.height);
+        
+              for(i = 0; i < squares.length;i++)
+              {
+                  squares[i].draw();
+              }
+            
+
+        }
+        generateSquad(40);
+        animate();
+        
+       
+        
+
+    </script>
+</body>
+
+</html>
