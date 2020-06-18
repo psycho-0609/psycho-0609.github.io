@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding-top: 20px;
+    background-color: rgba(223, 230, 233,1.0);
+    height: 100vh;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    
+}
+.title{
+    margin-bottom: 20px;
+}
+.list{
+    width: 100%;
+    /* position: relative; */
+   
+    /* padding-top:30px ; */
+    
+   
+}
+
+.col-id{
+    width: 10%;
+    text-align: center;
+    border-right: 1px solid white;
+}
+.col-name{
+    padding: 5px;
+    width: 20%;
+    border-right: 1px solid white;
+}
+.col-act{
+    width: 10%;
+}
+.col-detail{
+    width: 50%;
+    
+}
+table{
+    border: 1px solid gray;
+    width:100%;
+    border-collapse: collapse;
+    
+}
+
+table th{
+    background-color: rgb(79, 79, 216);
+    color: white;
+   
+}
+.icon{
+    display: flex;
+    font-size: 20px;
+    margin: 7px;
+    justify-content: space-evenly;
+}
+.create{
+   display: flex;
+    justify-content: flex-end;
+    margin-bottom: 6px;
+
+}
+.btn-create{
+    
+    color: white;
+    padding: 5px 10px;
+    background-color: rgb(36, 72, 231);
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    /* line-height: 30px; */
+    
+}
+.icon-create{
+    margin-right: 5px;
+
+}
+    

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZwl5F54b4LtwMdyh0XuzOkOy80dPmaBXJSQ6b5gkPf0w2Ip3a&usqp=CAU" type="image/x-icon">
+</head>
+<body>
+        <div class="container">
+            
+            <div class="title">
+                <h1>List book</h1>
+            </div>
+            
+            <div class="list">
+                <div class="create">
+                    <a href="/product/insert" class="btn-create"><span class="icon-create"><i class="fa fa-plus" aria-hidden="true"></i></span>Create</a>
+                </div>
+                <form action="">
+                    <table  border="1" >
+                        <tr class="thead">
+                            <th class="col-name">Name</th>
+                            <th class="col-id">Author</th>
+                            <th class="col-id"> Price</th>
+                            <th class="col-detail">Detail</th>
+                            <th class="col-act">Action</th>
+                        </tr> 
+                        {{#each products}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{author}}</td>
+                            <td>{{price}} $</td>
+                            <td>{{detail}}</td>
+                            <td>
+                                <span class="icon"><a href="/product/update?id={{_id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="/product/delete?id={{_id}}"><i class="fa fa-trash" aria-hidden="true"></i></a></span>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                </form>
+            </div>
+        </div>    
+</body>
+</html>
