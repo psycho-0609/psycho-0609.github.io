@@ -1,0 +1,217 @@
+body{
+    padding: 30px;
+    background-image: url(image/leaves-pattern.png);
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+.px-container{
+    padding:0px;
+    background-image: url(image/memphis-mini-dark.png);
+    background-attachment: fixed;
+    background-position: center center;
+}
+.contact{
+    margin-bottom: 30px;
+}
+.box-title{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.title{
+    width: 150px;
+    background-color: rgb(0, 160, 209);
+    text-align: center;
+    padding: 10px;
+    color:#fff;
+    font-size: 20px;
+    margin:0;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.image{
+    width: 250px;
+    height: auto;
+    margin-right: 30px;
+}
+.infor-contact{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.box-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.name{
+    font-size: 40px;
+    font-weight: bold;
+    color:white;
+
+}
+
+.job{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 550;
+    color: rgb(12, 185, 238);
+}
+.text-style{
+    color:rgb(180, 176, 176);
+    width: 100px;
+}
+.infor p {
+    font-weight: 550;
+    color: white;
+}
+.infor{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 175px;
+    
+}
+.icon i{
+    color: rgb(145, 138, 138);
+    font-size: 20px;
+
+}
+.btn{
+    border:2px solid rgb(145, 138, 138);
+    border-radius: 8px; 
+    padding:2px 10px;
+    /* height: 40px;  */
+    margin-top:10px;
+}
+.box-title-btn{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border-top: 1px solid grey; 
+}
+.skill{
+    display: flex;
+}
+.skilldev{
+    padding:20px;
+}
+.quality{
+    width: 40%;
+    position: relative;
+    height: 10px;
+    border: 1px solid rgb(145, 138, 138);
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.persen{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-color: red;
+}
+.skill-dev{
+   padding-left: 100px;
+    
+}
+.open{
+    /* height: 45px; */
+    transition: height 1s;
+    
+    
+}
+.section-skill{
+    /* height: 100%; */
+    width: 100%;
+    /* transition: 1s all; */
+    overflow: hidden;
+    /* display: ; */
+}
+.ex-img{
+    width: 70px;
+    height: auto;
+    margin-right: 20px;
+    
+}
+.ex-header{
+    display: flex;
+    align-items: center;
+}
+.time{
+    margin-left: 20px;
+    font-size: 17px;
+    
+}
+.ex-card{
+    margin-bottom: 30px;
+}
+.pro-img{
+    width: 90%;
+    position: relative;
+}
+.card-pro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.intro{
+    width: 80%;
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+    margin-top: -3rem;
+    z-index: 1000;
+}
+.intro h2{
+    font-size:20px;
+}
+.intro strong{
+    display: block;
+    margin-bottom:10px;
+}
+.intro p{
+    font-style: italic;
+}
+.card-pro:hover .intro{
+    transform: translateY(-20px);
+    transition: 1s all;
+}
+.pro-img img{
+    z-index: 100;
+}
+.pro-img:hover img{
+    filter: brightness(55%) blur(2px);
+    
+}
+.pro-title{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    color: aliceblue;
+    opacity: 0;
+    transform: translate(-50%,100%);
+    transition: .5s all;
+}
+.pro-img:hover .pro-title{
+    transform: translate(-50%,-50%);
+    /* color: red; */
+    opacity: 1;
+}
+.con-img{
+    width: 200px;
+}
+.con-header{
+    display: flex;
+    color: white;
+    align-items: center;
+}
+#animation{
+    height: 100%;
+    overflow: hidden;
+}
