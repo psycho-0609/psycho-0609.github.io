@@ -1,0 +1,75 @@
+﻿body {
+    padding-top:0!important;
+    padding-bottom:0!important;
+    padding-left: 20%;
+   
+}
+
+.nav-box {
+    background-color: rgb(34, 44, 50);
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 0px 15px 0px;
+}
+
+.nav-box ul li a {
+        color: #6c757d;
+}
+
+.img-link {
+    display: block;
+    max-width: 8rem;
+    margin: auto;
+}
+
+.infor-box {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: white;
+}
+
+
+
+.nav-box ul li:hover {
+    background-color: #6c757d;
+    border-radius: 0.2rem;
+}
+
+.nav-box ul li:hover a {
+    color: white;
+}
+
+
+.wellcome {
+    margin-top: .75rem;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.25rem;
+    display: block;
+}
+
+.title-nav {
+    color: #6c757d;
+    padding: .5rem 1rem;
+    background-color: black;
+}
+
+.title-data {
+    padding: 0;
+}
+
+ul,li{
+     width:100%!important;
+ }
+input[type="text"]{
+    width:100%!important;
+}
+
+.form-edit{
+    width:35%;
+}
+
+

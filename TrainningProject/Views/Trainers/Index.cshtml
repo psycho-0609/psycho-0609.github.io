@@ -1,0 +1,84 @@
+﻿@model IEnumerable<TrainningProject.Models.Trainer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content">
+    <h2 class="title-data">Trainers</h2>
+    <div class="data">
+
+        @Html.ActionLink("Create New", "Create", "Trainers", null, new { @class = "btn btn-primary mb-2" })
+        <table class="table table-light text-center table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TrainerName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Age)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.dob)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.WokingPlace)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            @if (Model.Count() > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TrainerName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Age)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.dob)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.WokingPlace)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Phone)
+                        </td>
+                        <td>
+
+                            <a href="/Trainers/Details/@item.TrainerID" class="btn btn-warning">Details</a>
+                            <a href="/Trainers/Delete/@item.TrainerID" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="7">Not Found Data</td></tr>
+            }
+
+        </table>
+    </div>
+</div>
+    
+

@@ -1,0 +1,17 @@
+﻿@{
+    Layout = null;
+}
+<style>
+    li {
+        padding: .5rem 1rem;
+    }
+</style>
+@if (Request.IsAuthenticated)
+{
+    <ul class="nav navbar-nav">
+        <li class="nav-item">
+            <a href="/Authen/Logout" class="nav-link" ><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </li>
+    </ul>
+   
+}

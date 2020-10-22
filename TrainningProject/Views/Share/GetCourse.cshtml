@@ -1,0 +1,81 @@
+﻿@model IEnumerable<TrainningProject.Models.Course>
+@{
+    ViewBag.Title = "GetCourse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .link-cate {
+        padding: 0.25rem 3rem;
+        border: 1px solid #6c757d;
+        border-radius: 0.6rem;
+        text-decoration: none;
+        color: #6c757d;
+    }
+
+        .link-cate:hover {
+            text-decoration: none;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+        }
+   .title-assign{
+       margin-bottom:0;
+   }
+    .boder{
+        margin-bottom:2rem;
+        display:block;
+        height:.2rem;
+        background-color:orange;
+        width:6rem;
+
+    }
+</style>
+<div class="content">
+
+    <h2>Course</h2>
+    <div class="data">
+
+        <h3 class="title-assign">Trainee</h3>
+        <span class="boder"></span>
+        <div class="row row-cols-4 mb-4">
+            @if (Model.Count() > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <div class="col-3">
+                        @Html.ActionLink(item.CourseName, "GetTraineeCourses", "TraineeCourses", new { id = item.CourseID }, new { @class = "link-cate" })
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-3">
+                    Not Found Data
+                </div>
+            }
+        </div>
+
+        <h3 class="title-assign">Trainer</h3>
+        <span class="boder"></span>
+        <div class="row row-cols-4">
+            @if (Model.Count() > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <div class="col-3">
+                        @Html.ActionLink(item.CourseName, "GetTrainerTopics", "TrainerTopics", new { id = item.CourseID }, new { @class = "link-cate" })
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-3">
+                    Not Found Data
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

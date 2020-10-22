@@ -1,0 +1,41 @@
+﻿@model IEnumerable<TrainningProject.Models.TrainerTopic>
+@{
+    ViewBag.Title = "TrainerTopics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <h2>TrainerTopics</h2>
+    <div class="data">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>
+                        Topic Name
+                    </th>
+                    <th>
+                        Course Name
+                    </th>
+                    <th>
+                        Category
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @{
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Topic.TopicName</td>
+                            <td>@item.Topic.Course.CourseName</td>
+                            <td>@item.Topic.Course.Category.Name</td>
+                        </tr>
+                    }
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+

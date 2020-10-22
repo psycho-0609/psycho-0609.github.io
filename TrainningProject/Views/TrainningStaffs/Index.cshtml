@@ -1,0 +1,64 @@
+﻿@model IEnumerable<TrainningProject.Models.TrainningStaff>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+
+    <h2 class="title-data">Trainning Staff</h2>
+    <div class="data">
+        @Html.ActionLink("Create New", "Create", "TrainningStaffs", null, new { @class = "btn btn-primary mb-2" })
+        <table class="table table-light text-center table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+
+                    <th>Action</th>
+                </tr>
+            </thead>
+            @if (Model.Count() > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td id="name">
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-warning" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="4">Not Found Data</td></tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+
+
+
+

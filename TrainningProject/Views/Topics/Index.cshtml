@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TrainningProject.Models.Topic>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <h2 class="title-data">Topics</h2>
+
+    <div class="data">
+        @Html.ActionLink("Create New", "Create", "Topics", null, new { @class = "btn btn-primary mb-2" })
+        <table class="table table-striped text-center">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopicName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Course.CourseName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    Trainer
+                </th>
+
+                <th>Action</th>
+            </tr>
+            @if (Model.Count() > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TopicName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Course.CourseName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        @if (item.TrainerTopics.Count > 0)
+                        {
+                            <td>
+                                @item.TrainerTopics.ElementAt(0).Trainer.TrainerName
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                @Html.ActionLink("Assign", "Create", "TrainerTopics", new { id = item.TopicID }, new { @class = "btn btn-info" })
+                            </td>
+                        }
+                        <td>
+
+                            @Html.ActionLink("Details", "Details", new { id = item.TopicID }, new { @class = "btn btn-warning" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.TopicID }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="5">Not Found Data</td></tr>
+            }
+
+        </table>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+﻿.content-box {
+    background-image: linear-gradient(to right top,rgba(0, 0, 0,0.7),rgba(0, 0, 0,0.7)), url(https://www.fpt-software.com/wp-content/uploads/sites/2/2019/09/fpt-danang-new-01.jpg);
+    min-height:100vh;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.box-title{
+    position:absolute;
+    top:40%;
+    left:5%;
+    
+}
+.home-title {
+    font-size: 4rem;
+    color: rgba(255, 255, 255,0.8);
+    
+    font-family: 'Dancing Script', cursive;
+}
+.slide{
+            
+            animation-name:slide;
+            animation-duration:1s ;
+            visibility: visible;
+        }
+        @keyframes slide{
+            0%{
+                opacity: 0;
+                transform: translateY(120%);
+            }
+            100%{
+                opacity: 1;
+                transform:  translateY(0%);
+            }
+        }

@@ -8,21 +8,25 @@ $(document).ready(function()
     $(btn).map(function(index,el){
 
         $(el).click(function(){
-            let height = $(animate).eq(index).css("height");
-            height = height.replace("px","00");
             let inew ="fa fa-chevron-up";
             let iold = "fa fa-chevron-down";
-            if(height>0){
-                $(animate).eq(index).css("height","0");
-                $(el).find("i").attr("class",iold);
-            }
-            else{
-                $(animate).eq(index).css("height","100%");
-                $(el).find("i").attr("class",inew);
-            }
+            
+            // if($(animate).eq(index).css("display")){
+            //     $(animate).eq(index).hide(1000);
+            //     $(el).find("i").attr("class",iold);
+            // }
+            // else{
+            //     $(animate).eq(index).show(1000);
+            //     $(el).find("i").attr("class",inew);
+            // }
+            $(animate).eq(index).slideToggle(1000);
 
-            console.log(height)
+            // console.log(height)
         })
     })
+
+    // $("#btn").click(function(){
+    //     $("#animation").toggle(1000);
+    // })
     
 })

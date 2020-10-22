@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbTrainningProModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="CourseID" Type="int" Nullable="false" />
+    <Property Name="CourseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Topic">
+    <Key>
+      <PropertyRef Name="TopicID" />
+    </Key>
+    <Property Name="TopicID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TourseID" Type="int" />
+    <Property Name="TopicName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Trainee">
+    <Key>
+      <PropertyRef Name="TraineeID" />
+    </Key>
+    <Property Name="TraineeID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="TrainerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="userName" Type="nchar" MaxLength="20" />
+    <Property Name="ProgramLanguage" Type="nchar" MaxLength="20" />
+    <Property Name="TOEIC" Type="int" />
+    <Property Name="Department" Type="nvarchar" MaxLength="50" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="dob" Type="date" />
+    <Property Name="Education" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="int" />
+  </EntityType>
+  <EntityType Name="TraineeCourse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TraineeID" Type="varchar" MaxLength="20" />
+    <Property Name="CourseID" Type="int" />
+  </EntityType>
+  <EntityType Name="Trainer">
+    <Key>
+      <PropertyRef Name="TrainerID" />
+    </Key>
+    <Property Name="TrainerID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="TrainerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nchar" MaxLength="70" />
+    <Property Name="UserName" Type="nchar" MaxLength="20" />
+    <Property Name="Age" Type="int" />
+    <Property Name="dob" Type="date" />
+    <Property Name="WokingPlace" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="int" />
+  </EntityType>
+  <EntityType Name="TrainerTopic">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TrainerID" Type="varchar" MaxLength="20" />
+    <Property Name="TopicID" Type="int" />
+  </EntityType>
+  <EntityType Name="TrainningStaff">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Course_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Course" Type="Self.Course" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Course">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Topic_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="Topic" Type="Self.Topic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="Topic">
+        <PropertyRef Name="TourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TraineeCourse_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="TraineeCourse" Type="Self.TraineeCourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="TraineeCourse">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TraineeCourse_Trainee">
+    <End Role="Trainee" Type="Self.Trainee" Multiplicity="0..1" />
+    <End Role="TraineeCourse" Type="Self.TraineeCourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trainee">
+        <PropertyRef Name="TraineeID" />
+      </Principal>
+      <Dependent Role="TraineeCourse">
+        <PropertyRef Name="TraineeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrainerTopic_Topic">
+    <End Role="Topic" Type="Self.Topic" Multiplicity="0..1" />
+    <End Role="TrainerTopic" Type="Self.TrainerTopic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Topic">
+        <PropertyRef Name="TopicID" />
+      </Principal>
+      <Dependent Role="TrainerTopic">
+        <PropertyRef Name="TopicID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrainerTopic_Trainer">
+    <End Role="Trainer" Type="Self.Trainer" Multiplicity="0..1" />
+    <End Role="TrainerTopic" Type="Self.TrainerTopic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trainer">
+        <PropertyRef Name="TrainerID" />
+      </Principal>
+      <Dependent Role="TrainerTopic">
+        <PropertyRef Name="TrainerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbTrainningProModelStoreContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Course" EntityType="Self.Course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Topic" EntityType="Self.Topic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trainee" EntityType="Self.Trainee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TraineeCourse" EntityType="Self.TraineeCourse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trainer" EntityType="Self.Trainer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrainerTopic" EntityType="Self.TrainerTopic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrainningStaff" EntityType="Self.TrainningStaff" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Course_Category" Association="Self.FK_Course_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Course" EntitySet="Course" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Topic_Course" Association="Self.FK_Topic_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="Topic" EntitySet="Topic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TraineeCourse_Course" Association="Self.FK_TraineeCourse_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="TraineeCourse" EntitySet="TraineeCourse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TraineeCourse_Trainee" Association="Self.FK_TraineeCourse_Trainee">
+      <End Role="Trainee" EntitySet="Trainee" />
+      <End Role="TraineeCourse" EntitySet="TraineeCourse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrainerTopic_Topic" Association="Self.FK_TrainerTopic_Topic">
+      <End Role="Topic" EntitySet="Topic" />
+      <End Role="TrainerTopic" EntitySet="TrainerTopic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrainerTopic_Trainer" Association="Self.FK_TrainerTopic_Trainer">
+      <End Role="Trainer" EntitySet="Trainer" />
+      <End Role="TrainerTopic" EntitySet="TrainerTopic" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

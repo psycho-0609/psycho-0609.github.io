@@ -1,0 +1,78 @@
+﻿@model IEnumerable<TrainningProject.Models.Trainee>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <h2 class="title-data">Trainees</h2>
+
+    <div class="data">
+        @Html.ActionLink("Create New", "Create", "Trainees", null, new { @class = "btn btn-primary mb-2" })
+
+        <table class="table text-center">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TraineeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dob)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProgramLanguage)
+                </th>
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Location)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Education)
+                </th>
+
+                <th>Action</th>
+            </tr>
+            @if (Model.Count() > 0)
+            {
+
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TraineeName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.dob)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProgramLanguage)
+                        </td>
+
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Location)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Education)
+                        </td>
+
+                        <td>
+                            <a class="btn btn-warning" href="/Trainees/Details/@item.TraineeID">Details</a>
+
+                            <a class="btn btn-danger" href="/Trainees/Delete/@item.TraineeID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="6">Not Found Data</td></tr>
+            }
+
+        </table>
+    </div>
+</div>
+

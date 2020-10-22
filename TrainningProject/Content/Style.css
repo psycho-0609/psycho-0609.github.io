@@ -1,0 +1,33 @@
+﻿.infor {
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__340.jpg");
+    background-position: center;
+    height: 14rem;
+}
+.data {
+    background: white;
+    padding: 1rem;
+    
+}
+.content {
+    padding:1rem;
+    padding-top:0.2rem;
+    background-color: rgb(237, 240, 246);
+}
+.slide {
+    animation-name: slide;
+    animation-duration: 1s;
+    visibility: visible;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+    

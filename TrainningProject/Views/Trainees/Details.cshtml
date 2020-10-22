@@ -1,0 +1,83 @@
+﻿@model TrainningProject.Models.Trainee
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div class="data">
+    <h4>Trainee</h4>
+    <hr />
+    <p><b>@Html.DisplayNameFor(model => model.TraineeName): </b>@Html.DisplayFor(model => model.TraineeName)</p>
+    <p><b>@Html.DisplayNameFor(model => model.userName): </b>@Html.DisplayFor(model => model.userName)</p>
+    <p>
+        <b>Password: </b>    <span>********</span>
+        @Html.ActionLink("Change Password", "ChangePassword", "Share", new { userName = Model.userName }, new { @class = "btn btn-info" })
+    </p>
+    <p><b>@Html.DisplayNameFor(model => model.ProgramLanguage): </b>@Html.DisplayFor(model => model.ProgramLanguage)</p>
+    <p><b>@Html.DisplayNameFor(model => model.TOEIC): </b>@Html.DisplayFor(model => model.TOEIC)</p>
+    <p><b>@Html.DisplayNameFor(model => model.Department): </b>@Html.DisplayFor(model => model.Department)</p>
+    <p><b>@Html.DisplayNameFor(model => model.Location): </b>@Html.DisplayFor(model => model.Location)</p>
+    <p><b>@Html.DisplayNameFor(model => model.dob): </b>@Html.DisplayFor(model => model.dob)</p>
+    <p><b>@Html.DisplayNameFor(model => model.Education): </b>@Html.DisplayFor(model => model.Education)</p>
+    <p><b>@Html.DisplayNameFor(model => model.Phone): </b>@Html.DisplayFor(model => model.Phone)</p>
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.TraineeID }, new { @class = "btn btn-warning" })
+        @if (User.IsInRole("TrainningStaff"))
+        {
+            @Html.ActionLink("Cancel", "Index", "Trainees", null, new { @class = "btn btn-secondary" })
+        }
+    </p>
+
+
+
+    <hr /> 
+
+    @if (User.IsInRole("TrainningStaff"))
+    {
+
+
+        var traineeCourse = Model.TraineeCourses;
+
+
+        <table class="table text-center table-dark table-striped">
+            <thead>
+                <tr>
+
+                    <th> Course ID</th>
+                    <th>Course Name</th>
+                    <th>Category</th>
+                    <th>Trainer</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var item in Model.TraineeCourses)
+                {
+                    var topics = item.Course.Topics;
+                    <tr>
+                        <td>@item.Course.CourseID</td>
+                        <td>@item.Course.CourseName</td>
+                        <td>@item.Course.Category.Name</td>
+                        <td>
+                            @foreach (var topic in topics)
+                            {
+                                if (topic.TrainerTopics.Count() > 0)
+                                {
+                                    <p>
+                                        @topic.TrainerTopics.ElementAt(0).Trainer.TrainerName
+                                    </p>
+
+                                }
+
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

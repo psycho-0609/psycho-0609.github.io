@@ -1,0 +1,82 @@
+﻿
+
+    @model IEnumerable<TrainningProject.Models.Course>
+
+   @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <style>
+        .form-search{
+            width:60%;
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:1rem;
+        }
+    </style>
+    <div class="content">
+        <h2 class="title-data">Courses</h2>
+
+        <div class="data">
+            <div class="form-search">
+                @Html.ActionLink("Create New", "Create", "Courses", null, new { @class = "btn btn-primary" })
+                <form action="/Courses/Index" class="" method="get">
+                    <div class="form-inline">
+                        <input type="search" name="nameSearch" value="" placeholder="Course..." class="form-control mr-2" />
+                        <input type="submit" name="name" value="Search" class="btn btn-success" />
+                    </div>
+                </form>
+            </div>
+
+
+            <table class="table text-center table-striped">
+
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CourseName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Category.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+
+                    <th>Action</th>
+                </tr>
+                @if (Model.Count() > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CourseName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Category.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            @if (User.IsInRole("TrainningStaff"))
+                            {
+                                <td>
+
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.CourseID }, new { @class = "btn btn-warning mr-1" })
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.CourseID }, new { @class = "btn btn-danger" })
+                                </td>
+                            }
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="4">Not Found Dta</td></tr>
+                }
+
+            </table>
+        </div>
+    </div>
+    
+

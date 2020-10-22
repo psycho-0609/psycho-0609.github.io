@@ -1,0 +1,53 @@
+﻿@model TrainningProject.Models.TraineeCourse
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <h2>Edit</h2>
+
+    <div class="data">
+        <div class="form-edit">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>TraineeCourse</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.ID)
+
+                    <div class="form-group">
+                        <label class="col-md-2">Trainee</label>
+                        <div class="col-md-10">
+                            @Html.DropDownList("TraineeID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TraineeID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2">Course</label>
+                        <div class="col-md-10">
+                            @Html.DropDownList("CourseID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                            @Html.ActionLink("Cancel", "GetTraineeCourses", new { id = Model.CourseID }, new { @class = "btn btn-secondary" })
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

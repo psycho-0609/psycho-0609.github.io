@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "_Trainee";
+    Layout = null;
+}
+
+<ul class="navbar-nav mr-auto">
+
+    <li>@Html.ActionLink("Your Profile", "TraineeProfile", "TraineeUser", new { userName = User.Identity.Name }, new { @class="nav-link"})</li>
+    <li>@Html.ActionLink("Your Assign", "GetAssignCourse", "TraineeUser", new { userName = User.Identity.Name }, new { @class = "nav-link" })</li>
+</ul>
+
+

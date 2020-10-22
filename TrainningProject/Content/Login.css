@@ -1,0 +1,31 @@
+﻿body {
+    background-image: url(https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.container-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 28%;
+    padding: 3rem;
+    border-radius: .75rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.btn-submit {
+    width: 100%;
+}
+
+.title {
+    font-size: 2rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+label, input {
+    font-family: 'Great Vibes', cursive;
+}

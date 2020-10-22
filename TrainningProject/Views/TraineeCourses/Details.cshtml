@@ -1,0 +1,23 @@
+﻿@model TrainningProject.Models.TraineeCourse
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <h2>Details</h2>
+    <div class="data">
+        <div>
+
+            <h4>Trainee Course</h4>
+            <hr />
+            <p><b>@Html.DisplayNameFor(model => model.Course.CourseName): </b>@Html.DisplayFor(model => model.Course.CourseName)</p>
+            <p><b>@Html.DisplayNameFor(model => model.Trainee.TraineeName): </b>@Html.DisplayFor(model => model.Trainee.TraineeName)</p>
+
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-warning" })
+
+        </p>
+    </div>
+</div>

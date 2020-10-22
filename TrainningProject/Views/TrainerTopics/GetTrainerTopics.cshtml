@@ -1,0 +1,47 @@
+﻿@model IEnumerable<TrainningProject.Models.Topic>
+@{
+    ViewBag.Title = "GetTrainerTopics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <h2>@ViewBag.Courses.CourseID - @ViewBag.Courses.CourseName</h2>
+
+    <div class="data">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>Trainer</th>
+                    <th>Topic</th>
+
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Count() > 0)
+                {
+
+                    foreach (var item in Model)
+                    {
+                        foreach (var trainer in item.TrainerTopics)
+                        {
+                            <tr>
+                                <td>@trainer.Trainer.TrainerName</td>
+                                <td>@trainer.Topic.TopicName</td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", "TrainerTopics", new { id = trainer.ID }, new { @class = "btn btn-warning" })
+                                    @Html.ActionLink("Delete", "Delete", "TrainerTopics", new { id = trainer.ID }, new { @class = "btn btn-danger" })
+                                </td>
+
+                            </tr>
+                        }
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="3">Not Found Data</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

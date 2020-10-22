@@ -1,0 +1,32 @@
+﻿@model TrainningProject.Models.TrainningStaff
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <h2>Details</h2>
+
+    <div class="data">
+        <h4>TrainningStaff</h4>
+        <hr />
+        <p><b>@Html.DisplayNameFor(model => model.Name): </b> @Html.DisplayFor(model => model.Name)</p>
+        <p><b>@Html.DisplayNameFor(model => model.UserName): </b> @Html.DisplayFor(model => model.UserName)</p>
+        <p><b>@Html.DisplayNameFor(model => model.Email): </b> @Html.DisplayFor(model => model.Email)</p>
+       
+        <p>
+            <b>Password: </b> <span>************</span>
+            @Html.ActionLink("Change Password", "ChangePassword", "Share", new { userName = Model.UserName }, new { @class = "btn btn-info" })
+        </p>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-warning" })
+            @if (User.IsInRole("Admin"))
+            {
+                @Html.ActionLink("Cancel", "Index", "TrainningStaffs", null, new { @class = "btn btn-secondary" })
+            }
+
+
+        </p>
+    </div>
+</div>
+

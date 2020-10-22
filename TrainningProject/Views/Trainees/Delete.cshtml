@@ -1,0 +1,37 @@
+﻿@model TrainningProject.Models.Trainee
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <h2>Delete Trainee</h2>
+    <div class="data">
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+
+            <hr />
+            <p><b>@Html.DisplayNameFor(model => model.TraineeName): </b>@Html.DisplayFor(model => model.TraineeName)</p>
+            <p><b>@Html.DisplayNameFor(model => model.userName): </b>@Html.DisplayFor(model => model.userName)</p>
+            <p><b>@Html.DisplayNameFor(model => model.dob): </b>@Html.DisplayFor(model => model.dob)</p>
+            <p><b>@Html.DisplayNameFor(model => model.ProgramLanguage): </b>@Html.DisplayFor(model => model.ProgramLanguage)</p>
+            <p><b>@Html.DisplayNameFor(model => model.TOEIC): </b>@Html.DisplayFor(model => model.TOEIC)</p>
+            <p><b>@Html.DisplayNameFor(model => model.Education): </b>@Html.DisplayFor(model => model.Education)</p>
+            <p><b>@Html.DisplayNameFor(model => model.Department): </b>@Html.DisplayFor(model => model.Department)</p>
+            <p><b>@Html.DisplayNameFor(model => model.Location): </b>@Html.DisplayFor(model => model.Location)</p>
+            <p><b>@Html.DisplayNameFor(model => model.Phone): </b>@Html.DisplayFor(model => model.Phone)</p>
+
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                    @Html.ActionLink("Cancel", "Index", "Trainees", null, new { @class = "btn btn-secondary" })
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

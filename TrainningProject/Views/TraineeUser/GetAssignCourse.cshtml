@@ -1,0 +1,72 @@
+﻿@model IEnumerable<TrainningProject.Models.TraineeCourse>
+@{
+    ViewBag.Title = "GetAssignCourse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <h2>Assign Course</h2>
+    <div class="data">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Topic</th>
+                    <th>Trainer</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Count() > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td> @item.CourseID</td>
+                            <td> @item.Course.CourseName</td>
+                            @if (item.Course.Topics.Count <= 0)
+                            {
+                                <td>Not yet</td>
+                                <td> Not yet</td>
+                            }
+                            else
+                            {
+                                <td>
+                                    @foreach (var topic in item.Course.Topics)
+                                    {
+
+                                        <p>@topic.TopicName</p>
+                                    }
+                                </td>
+                                <td>
+
+                                    @foreach (var trainer in item.Course.Topics)
+                                    {
+
+                                        if (trainer.TrainerTopics.Count > 0)
+                                        {
+
+                                            @trainer.TrainerTopics.ElementAt(0).Trainer.TrainerName
+
+                                        }
+                                        else
+                                        {
+                                            <p>Not yet</p>
+                                        }
+                                    }
+                                </td>
+                            }
+
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="4">Not found data</td></tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+

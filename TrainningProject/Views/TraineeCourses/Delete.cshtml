@@ -1,0 +1,29 @@
+﻿@model TrainningProject.Models.TraineeCourse
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <h2>Delete</h2>
+    <div class="data">
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+
+            <hr />
+            <p><b>@Html.DisplayNameFor(model => model.Course.CourseName): </b>@Html.DisplayFor(model => model.Course.CourseName)</p>
+            <p><b>@Html.DisplayNameFor(model => model.Trainee.TraineeName): </b>@Html.DisplayFor(model => model.Trainee.TraineeName)</p>
+
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                    @Html.ActionLink("Cancel", "GetTraineeCourses", new { id = Model.CourseID }, new { @class = "btn btn-secondary" })
+                </div>
+            }
+        </div>
+    </div>
+</div>

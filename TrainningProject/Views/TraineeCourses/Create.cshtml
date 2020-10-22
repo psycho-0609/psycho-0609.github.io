@@ -1,0 +1,50 @@
+﻿@model TrainningProject.Models.TraineeCourse
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <h2>Create</h2>
+
+    <div class="data">
+        <div class="form-edit">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>TraineeCourse</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label class="col-md-2">Trainee</label>
+
+                        <div class="col-md-10">
+                            @Html.DropDownList("TraineeID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TraineeID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2">Course</label>
+                        <div class="col-md-10">
+                            <input type="hidden" name="CourseID" value=" @ViewBag.Courses.CourseID" />
+                            <p class="font-italic"> @ViewBag.Courses.CourseName</p>
+                            @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                            @Html.ActionLink("Cancel", "GetTraineeCourses", "TraineeCourses", new { id = ViewBag.Courses.CourseID }, new { @class = "btn btn-secondary" })
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

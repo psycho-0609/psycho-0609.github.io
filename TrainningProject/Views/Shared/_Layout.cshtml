@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css"
+          integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous">
+    <link />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/Style.css">
+
+</head>
+<body>
+    <section class="nav-box">
+
+        <ul class="nav nav-pills flex-column" role="tablist">
+            <li class="nav-item infor">
+                <div class="infor-box">
+                    <span class="img-link">
+                        <img src="https://media1.tenor.com/images/f74195ebd09d5422376eece9a464a7a7/tenor.gif?itemid=17907142"
+                             class=" rounded-circle img-fluid img-thumbnail " alt="">
+                    </span>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <p class="wellcome">Wellcome Admin</p>
+                    }
+                    @if (User.IsInRole("Trainer"))
+                    {
+                        <p class="wellcome">Wellcome Trainer</p>
+                    }
+                    @if (User.IsInRole("TrainningStaff"))
+                    {
+                        <p class="wellcome">Wellcome Trainning Staff</p>
+                    }
+                    @if (User.IsInRole("Trainee"))
+                    {
+                        <p class="wellcome">Wellcome Trainee</p>
+                    }
+
+                </div>
+            </li>
+        </ul>
+        
+            <div class="title-nav"><i class="fas fa-bars mr-2"></i>Menu</div>
+            @{
+                if (User.IsInRole("Admin"))
+                {
+                    @Html.Partial("_Admin")
+                }
+                if (User.IsInRole("TrainningStaff"))
+                {
+                    @Html.Partial("_TrainningStaff")
+                }
+                if (User.IsInRole("Trainer"))
+                {
+                    @Html.Partial("_Trainer")
+                }
+                if (User.IsInRole("Trainee"))
+                {
+                    @Html.Partial("_Trainee")
+                }
+            }
+        
+            <div class="title-nav"><i class="fas fa-users mr-2"></i>User</div>
+            @Html.Partial("_Login")
+        
+        
+        
+
+
+    </section>
+    <div class="container-fluid body-content p-0 m-0 position-relative">
+        @RenderBody()
+        
+      
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

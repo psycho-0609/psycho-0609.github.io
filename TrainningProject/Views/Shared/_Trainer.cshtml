@@ -1,0 +1,11 @@
+﻿
+@{
+    Layout = null;
+}
+
+<ul class="navbar-nav mr-auto">
+    
+    <li>@Html.ActionLink("Your Profile", "GetUser", "TrainerUser", new { userName = User.Identity.Name }, new { @class="nav-link"})</li>
+    <li>@Html.ActionLink("Your Assign", "TrainerAssign", "TrainerUser", new { userName = User.Identity.Name }, new { @class = "nav-link" })</li>
+</ul>
+
