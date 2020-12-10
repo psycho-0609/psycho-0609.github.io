@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        
+        grid-row-gap: 15px;
+        width: 300px;
+        grid-column-gap: 15px;
+        
+
+
+    }
+    .container{
+        background-color:black;
+        width: 330px;
+        padding: 15px;
+    }
+    .result,.string{
+        height: 50px;
+        color: #fff;
+        font-size: 35px;
+        text-align: right;
+        margin: 5px 0;
+        
+        
+    }
+
+    .grid-item,.grid-item1 {
+        background-color: rgba(108, 108, 108, 0.8);
+        border-radius: 50%;
+        font-size: 30px;
+        text-align: center;
+        width: 62px;
+        line-height: 62px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .grid-item:hover,.item1:hover,.grid-item1:hover {
+        background-color: darkgray;
+    }
+    .el:hover{
+        background-color: orange;
+    }
+
+    .item1 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+
+    }
+
+    .item2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+        border-radius: 50rem;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .el{
+        background-color: #f0932b;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="string"></div>
+        <div class="result"></div>
+        <div class="grid-container">
+            <div class="grid-item1" id="btnReset">C</div>
+            <div class="grid-item1 item1" id="btnRemove">&larr;</div>
+            <div class="grid-item el method" data="/" id="divine">&div;</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item el method" id="nhan" data="*">&times;</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item el method">-</div>
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item el method">+</div>
+            <div class="grid-item item2">0</div>
+            <div class="grid-item ">.</div>
+            <div class="grid-item1 el" id="btnCal">=</div>
+
+
+        </div>
+    </div>
+
+    <script>
+        let el = document.querySelector(".string");
+        let bntCal =  document.getElementById("btnCal");
+        let result = document.querySelector(".result");
+        let divine = document.querySelector("#divine").textContent;
+        let nhan = document.querySelector("#nhan").textContent;
+
+      
+
+        function getEvent()
+        {
+            
+            let arrBtn = document.querySelectorAll(".grid-item");
+        arrBtn.forEach(element =>{
+            element.addEventListener("click",function(e){
+                contineuCal(element.textContent);
+                el.textContent += element.textContent;
+                
+            })
+            
+            
+        })
+        }
+
+        function reset()
+        {
+            document.getElementById("btnReset").addEventListener("click",()=>{
+                el.textContent = "";
+                result.textContent = "";
+
+            })
+        }
+
+
+        function calcultor()
+        {
+            btnCal.addEventListener("click",()=>{
+                let string = el.textContent;
+                console.log(string);
+                result.textContent = eval(processString(string));
+                console.log(processString(string));
+            })
+        }
+
+
+        function contineuCal(textContent)
+        {
+            if(result.textContent != "" && (textContent == "+" || textContent == "-" || textContent == divine || textContent == nhan))
+            {
+                el.textContent = result.textContent;
+                result.textContent = "";
+            }
+            else if(result.textContent != ""){
+                el.textContent = "";
+                result.textContent = "";
+            }
+        }
+
+        function processString(string)
+        {
+            
+            console.log(divine == divine);
+
+            string = string.split("");
+            console.log(string);
+            for(let i = 0; i < string.length; i++)
+            {
+                if(string[i] === divine)
+                {
+                    console.log(string[i]);
+                    string[i] = "/";
+                }else if(string[i] === nhan)
+                {
+                    string[i] = "*";
+                }
+            }
+            console.log(string);
+            return string.join("");
+        }
+
+
+        function removeOne()
+        {
+            document.getElementById("btnRemove").addEventListener("click",()=>{
+                let string = el.textContent.split("");
+                string.splice(string.length-1,1);
+                el.textContent = string.join("");
+            })
+            
+        }
+        
+
+
+        reset();
+        getEvent();
+        calcultor();
+        contineuCal();
+        removeOne();
+        
+    </script>
+</body>
+
+</html>
