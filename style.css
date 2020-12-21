@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.container-fluid{
+    padding: 0;
+}
+
+.navstyle{
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 1rem;
+}
+.banner{
+    text-align: center;
+}
+.navbar-wapper{
+    width: 60%;
+    justify-content: space-between;
+}
+.navbar-wapper li a, h1, p, h5{
+    font-family: 'Playfair Display', serif;
+    color: rgb(98,98,98);
+    
+}
+.navbar-wapper li a{
+    font-size: 14px;
+}
+.brand{
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+    
+}
+.content-box{
+    padding: 3rem 1.5rem 0 1.5rem;
+    
+}
+small{
+    color: rgb(180, 173, 158);
+    font-family: 'Ubuntu', sans-serif;
+}
+h1{
+    padding: 1rem 0;
+   
+}
+.card-list{
+    padding: 2rem 0;
+}
+.item{
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+.card{
+    border: none;
+}
+.card-content{
+    padding: 1rem 0;
+}
+.card-title{
+    padding: 1rem 0;
+    font-size: 1.9rem;
+    margin: 0;
+}
+.card-title a{
+    color: rgb(98,98,98);
+}
+.card-title a:hover{
+    text-decoration: none;
+    color:  rgb(180, 173, 158);
+}
+.sign-up{
+   
+    padding: 3rem;
+    background-color: rgb(240,240,240);
+}
+.sign-up div{
+    width: 100%;
+    text-align: center;
+    
+}
+.title-sign-up{
+    color: rgb(51,51,51);
+    padding: 0;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+}
+.area-input{
+    width: 300px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 0.5rem 0;
+
+
+}
+.btn-box{
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: 'Playfair Display', serif;
+    
+    
+}
+
+.footer-nav{   
+    display: flex;
+    align-items: center;
+}
+.footer-nav{
+    list-style: none;
+    padding: 0 ;
+    margin: 0;
+    
+}
+.footer-nav li a{
+    text-decoration: none;
+}
+.footer{
+    font-family: 'Playfair Display', serif;
+    background-color: rgb(240,240,240);
+}
+.footer-item{
+    align-items: center;
+}
+.footer-nav li{
+    margin: 1rem;
+}
+.footer-right{
+    justify-content: flex-end;
+}
+@media screen and (max-width:990px)
+{
+    .footer-nav{
+    
+        justify-content: center;
+    }
+    .navbar-wapper{
+        width: 100%;
+        
+    }
+    .area-input{
+        width: 200px;
+    }
+    .navstyle{
+        padding:1.3rem 0;
+    }
+    .content-box{
+        padding: 3rem 0rem 0 0rem;
+        
+    }
+}
