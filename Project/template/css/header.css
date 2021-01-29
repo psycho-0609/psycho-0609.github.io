@@ -83,6 +83,7 @@ header {
     display: none;
 }
 
+
 @media only screen and (max-width: 992px) {
     .header-nav-card {
         display: block;
@@ -105,6 +106,11 @@ header {
     }
     .nav-search-box{
         display: none;
+    }
+    .active-nav a{
+        color: #08bbb7;
+        border-bottom: 2px solid #08bbb7;
+        padding-bottom: 5px;
     }
 }
 

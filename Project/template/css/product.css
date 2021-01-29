@@ -26,19 +26,30 @@
     color: #08BBB7;
 }
 
+/* Search and order by */
 
-/* Fillter */
-.filter-search{
+.search-order-box{
+    justify-content: space-between;
+}
+.form-search{
     position: relative;
-
 }
-.filter-search form button{
-    
+.order-by{
+    text-align: right;
+}
+.order-by select{
+    width: 50%;
+} 
+.btn-search-submit{
+    height: 38px;
     position: absolute;
-    top: 18%;
-    left: 5%;
-    
+    top:0;
+    left: 0;
+    padding: 0 .7rem;
+    background: none;
+    border: none;
 }
+/* Fillter */
 .filter-box{
     margin-bottom: 1.5rem;
 }
