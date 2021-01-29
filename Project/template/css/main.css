@@ -1,0 +1,171 @@
+.title-box{
+    border-bottom: 2px solid #08BBB7;
+    /* margin: .5rem; */
+    width: 100%;
+    margin: 0;
+    
+}
+.box-element{
+    margin-bottom: 3rem;
+}
+.title{
+    padding: 0;
+}
+.title-box h1{
+    display: inline-block;
+    background-color: #08BBB7;
+    padding: 0.7rem;
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0;
+    margin-bottom: -1px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+.product-item{
+    margin: 1.5rem 0rem;
+    margin-top: 0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.card-text-sale{
+    color: rgb(35, 35, 35);
+    margin: 0;
+}
+
+.card-body{
+    padding: 0;
+    padding-top: 1rem;
+    text-align: center;
+}
+.card-title{
+    font-size: 1.1rem;
+    color: black;
+    
+}
+.card-text{
+    color: #08BBB7;
+}
+.card{
+    border: none;
+}
+.sale{
+    top: 0; right:0 ;
+    position: absolute;
+    background-color: #e7474f;
+    color: white;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+}
+.new{
+    top: 0; left:0 ;
+    position: absolute;
+    background-color: #08BBB7;
+    color: rgb(255, 255, 255);
+    padding: 0.1rem 0.4rem;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-text-1{
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-text-2{
+    font-family: 'Playfair Display', serif;
+}
+
+.card .card-body a:hover h5{
+    color: #08BBB7;
+    
+}
+.card .card-body a:hover{
+    text-decoration: none;
+    
+}
+a:hover{
+    text-decoration: none;
+}
+.box-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-viewmore{
+    background-color: #F39C12;
+    color: #fff;
+    padding: 0.5rem 2rem;
+
+}
+.btn-viewmore:hover{
+    background-color: #F39C12;
+    color: #fff;
+    transform: rotateY(360deg);
+    transition: 1s all;
+    /* transform: rotateY(0); */
+}
+.card-news{
+    text-align: start;
+}
+.card-news .card-title{
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-weight: bold;
+}
+.infor-news span{
+    display: inline-block;
+    font-size: 0.7rem;
+    padding-right: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+.infor-news{
+    font-family: 'Roboto', sans-serif;
+}
+.infor-news span{
+    color: rgb(130, 130, 130);
+}
+.add-cart-box{
+    z-index: 1;
+    bottom: -13%;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(251, 96, 96);
+    opacity: 0;
+    transition: 1s all;
+}
+.add-cart-box a{
+    display: block;
+    color: #fff;
+    line-height: 2.5rem;
+}
+.card-img{
+    position: relative;
+}
+.card:hover .add-cart-box{
+    opacity: 1;
+    bottom: 0; 
+    transition: .7s all;
+     
+}
+.card:hover img{
+    filter: brightness(90%);
+}
+.card-body{
+    z-index: 2;
+    background-color: #fff;
+}
+@media only screen and (max-width:767px) and (min-width:480px){
+    .products .item{
+        width: 50%;
+    }
+}
+img{
+    width: 100%;
+}
+
+

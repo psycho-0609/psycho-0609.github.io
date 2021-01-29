@@ -1,0 +1,236 @@
+.slide-content-box{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%,-50%);
+    font-family: 'Playfair Display', serif;
+}
+.slide-content-box .slide-title{
+    font-size: 2.8rem;
+}
+.slide-content-box p{
+    margin-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: rgb(231, 231, 231);
+    
+}
+.btn-in-slide{
+    background-color: #F39C12;
+    color: #fff;
+    padding: .7rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+}
+
+/* List Category */
+.list-category{
+    margin-right: -6px;
+    margin-left:-6px ;
+}
+.img-cate{
+    display: block;
+    width: 100%;
+}
+
+.product-list-cate{
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+    
+}
+.product-list-cate a{
+    margin: 1rem;
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+}
+
+.about-picture{
+    position: relative;
+}
+.picture-title{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    color: rgb(27, 26, 26);
+    position: absolute;
+    color: #fff;
+    display: block;
+    text-align: center;
+    width: 100%;
+    
+}
+
+/* Carousel */
+.owl-carousel .product-item{
+    margin-bottom: 0;
+}
+
+
+/* .panner-adver */
+
+.panner-adver{
+    position: relative;
+    /* margin: 0 0.5rem; */
+    margin-bottom: 2rem;
+
+}
+.panner-adver img{
+    width: 100%;
+    max-height: 220px;
+    filter: brightness(50%);
+}
+img{
+    width: 100%;
+}
+
+.text-adver{
+    position: absolute;
+    font-size: 1.7rem;
+    color: #fff;
+    top: 32%;
+    left: 10%;
+    
+}
+.text-adver p{
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+
+@media only screen and (max-width:767px) and (min-width:480px) {
+    /* Category */
+    .list-category .item-cate{
+        width: 50%;
+    }
+    .list-category .item-cate:nth-child(2){
+        margin-bottom: 1.8rem;
+        
+    }
+    .text-adver{
+        font-size: 1rem;
+    }
+    
+}
+@media only screen and (max-width:1140px){
+    /* Slide */
+    .slide-content-box .slide-title{
+        font-size: 2rem;
+    }
+    .slide-content-box p{
+        font-size: 1rem;
+    }
+    .btn-in-slide{
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+
+    }
+    
+}
+@media only screen and (max-width:1000px){
+    /* Slide */
+    .slide-content-box .slide-title{
+        font-size: 1.8rem;
+    }
+    .slide-content-box p{
+        font-size: .8rem;
+        margin-bottom: .7rem;
+    }
+    .list-category .item-cate:nth-child(2){
+        margin-bottom: 1.8rem;
+        
+    }
+    .btn-in-slide{
+        padding: 0.5rem 1rem;
+        font-size: .5rem;
+
+    }
+    
+}
+
+@media only screen and (max-width:768px){
+    /* Slide */
+    .slide-content-box .slide-title{
+        font-size: 1.5rem;
+    }
+    .slide-content-box p{
+        font-size: .6rem;
+        margin: 0;
+    }
+    .btn-in-slide{
+        padding: 0.2rem .5rem;
+        font-size: .3rem;
+
+    }
+    
+}
+
+
+@media only screen and (max-width:480px){
+    /* silide header */
+    .slide-content-box .slide-title{
+        font-size: 1rem;
+    }
+    .slide-content-box p{
+        font-size: .4rem;
+        margin: 0;
+    }
+    /* Category */
+    .list-category .item-cate{
+        margin-bottom: 1.5rem;
+        
+    }
+    .list-category .item-cate:last-child{
+        margin-bottom:0;
+        
+    }
+    .text-adver{
+        font-size: .7rem;
+    }
+   
+    .btn-in-slide{
+        padding: 0.2rem .5rem;
+        font-size: .3rem;
+
+    }
+}
+
+@media screen and (min-width:992px){
+
+    /* category */
+    .about-picture:hover img{
+        filter: blur(2px) brightness(50%);
+        transition: 0.5s all;
+    }
+    .about-picture:hover .picture-title{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        transition: .5s all;
+    }
+    .picture-title{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,70%);
+        opacity: 0;
+    }
+
+}
+
+@media screen and (max-width:992px){
+    /* Category */
+    .picture-title{
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0,0.6);
+        padding: .3rem;
+    }
+}
+
+
+
+
