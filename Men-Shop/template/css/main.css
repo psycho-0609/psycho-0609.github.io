@@ -160,6 +160,47 @@ a:hover{
     z-index: 2;
     background-color: #fff;
 }
+
+/* Panination */
+.pagination-box{
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: .5rem 1rem;
+    
+    
+
+}
+.pagination{
+    padding: .5rem .8rem;
+    background-color: rgb(236, 236, 236);
+    margin-bottom: 0;
+    
+}
+.pagination li{
+    margin: .3rem;
+}
+.pagination li a{
+    /* font-size: 1.1rem; */
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+   
+    
+}
+.pagination li a:hover{
+    background-color: #08BBB7;
+    color: white;
+}
+.active-pagination{
+    background-color: #08BBB7;
+    color: #fff !important;
+}
+@media screen and (max-width:767px){
+    .pagination-box nav ul{
+       display: flex;
+       justify-content: center;
+    }
+}
 @media only screen and (max-width:767px) and (min-width:480px){
     .products .item{
         width: 50%;

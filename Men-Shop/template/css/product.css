@@ -24,6 +24,7 @@
 }
 .current-page{
     color: #08BBB7;
+    font-weight: bold;
 }
 
 /* Search and order by */
@@ -48,6 +49,7 @@
     padding: 0 .7rem;
     background: none;
     border: none;
+    box-shadow: none;
 }
 /* Fillter */
 .filter-box{
@@ -78,9 +80,9 @@
     position: relative;
 }
 .btn-active-filter-box{
+    outline: none;
     border: none;
     background: none;
-    outline: none;
     padding: 0 0.7rem;
     position: absolute;
     top: 0;
@@ -154,14 +156,101 @@
     .button-filter-box{
         display: none;
     }
+    .display-bg-behind-filter{
+        display: none;
+    }
 }
 
 @media screen and (max-width:767px){
+    .title-banner-page{
+        font-size: 1rem;
+        margin: 0;
+    }
+    .link-previous-page, .current-page{
+        font-size: .7rem;
+    }
+    /* Filter */
     .filter-box-all{
-        display: none;
+        padding: 0;
+        position: fixed;
+        top:0;
+        left: -100%;
+        background-color: white;
+        z-index: 1111;
+        width: 13rem;
+        overflow: scroll;
+        bottom: 0;
+        transition: .5s left;
+    }
+    .filter-box{
+        margin-bottom: 0;
+    }
+    .filter-title{
+        border-top:1px solid rgb(191, 191, 191) ;
+        border-bottom: 1px solid rgb(201, 201, 201);
+        
+    }
+    .filter-title h5{
+        font-size: 1rem;
+    }
+    .list-cate li label{
+        font-size: .8rem;
+    }
+    .btn-active-filter-box{
+        color: black;
+        font-weight: unset;
     }
     .button-filter-box{
         display: block;
+    }
+
+
+    /* active filter */
+    .filter-box-all-active{
+        left: 0;
+        transition: .5s left;
+    }
+    .display-bg-behind-filter{
+        position: fixed;
+        display: block;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0,0.7);
+    }
+}
+
+@media screen and (max-width:576px){
+    .search-order-box div{
+        width: 50%;
+    }
+    .order-by{
+        margin-left: auto;
+    }
+    .order-by select{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:478px){
+    .search-order-box{
+        justify-content: flex-end;
+    }
+    .filter-search{
+        display: none;
+    }
+    .order-by{
+        width: 100% !important;
+    }
+    .title-banner-page{
+        font-size: .8rem;
+        margin: 0;
+    }
+    .link-previous-page, .current-page{
+        font-size: .5rem;
     }
 }
 

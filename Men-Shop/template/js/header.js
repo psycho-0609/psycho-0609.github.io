@@ -2,7 +2,6 @@ $(document).ready(function () {
 
     ////////////////// active fixed navbar /////////////////
     $(window).scroll(function () {
-        console.log('1')
 
         var winTop = $(window).scrollTop();
         if (winTop > 30) {
@@ -24,7 +23,7 @@ $(document).ready(function () {
     })
 
     $("#btnDropdownMenuProduct").click(function () {
-        $("#dropdownMenuProduct").sliceToogle();
+        $("#dropdownMenuProduct").slideToggle();
     })
 
 
@@ -35,7 +34,6 @@ $(document).ready(function () {
     $("#btnSearch").click(function(){
         $("#hideContentSearch").addClass("hide-content-search");
         $("#searchBox").addClass("search-active");
-        console.log("abc");
     })
 
 

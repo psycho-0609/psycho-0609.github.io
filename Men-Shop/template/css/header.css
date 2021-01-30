@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
 }
+/* navbar */
 .header-wellcome {
     padding: 0 1.6rem;
     background-color: black;
@@ -83,36 +84,7 @@ header {
     display: none;
 }
 
-
-@media only screen and (max-width: 992px) {
-    .header-nav-card {
-        display: block;
-    }
-    .header-nav-card span {
-        font-size: 1.5rem;
-        color: rgb(72, 72, 72);
-    }
-
-    .navbar-left-box {
-        display: block;
-    }
-    .nav-search-box{
-        display: block;
-    }
-}
-@media screen and (min-width: 992px) {
-    .navbar-left-box {
-        display: none;
-    }
-    .nav-search-box{
-        display: none;
-    }
-    .active-nav a{
-        color: #08bbb7;
-        border-bottom: 2px solid #08bbb7;
-        padding-bottom: 5px;
-    }
-}
+/* navbar - left */
 
 .hide-content {
     width: 100%;
@@ -288,28 +260,60 @@ header {
     font-size: 2rem;
     margin-left: 0.5rem;
 }
-.btn-search{
+.btn-search {
     background: none;
     border: none;
     outline: none;
     margin-right: 10px;
 }
-.nav-search-box{
+.nav-search-box {
     width: 100%;
     position: relative;
     height: 0;
     overflow: hidden;
-    transition: .5s all;
+    transition: 0.5s all;
 }
-.nav-search-box input{
+.nav-search-box input {
     padding-left: 2.5rem;
 }
-.nav-icon-search{
+.nav-icon-search {
     position: absolute;
-    top:25%;
-    left: 2%;
+    top: 0;
+    left: 0;
+    padding: 0.5rem 0.7rem;
+    height: 100%;
 }
-.nav-search-box-active{
+.nav-search-box-active {
     height: auto;
-    transition: .5s all;
+    transition: 0.5s all;
+}
+
+@media only screen and (max-width: 992px) {
+    .header-nav-card {
+        display: block;
+    }
+    .header-nav-card span {
+        font-size: 1.5rem;
+        color: rgb(72, 72, 72);
+    }
+
+    .navbar-left-box {
+        display: block;
+    }
+    .nav-search-box {
+        display: block;
+    }
+}
+@media screen and (min-width: 992px) {
+    .navbar-left-box {
+        display: none;
+    }
+    .nav-search-box {
+        display: none;
+    }
+    .active-nav a {
+        color: #08bbb7;
+        border-bottom: 2px solid #08bbb7;
+        padding-bottom: 5px;
+    }
 }

@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="template/css/main.css">
     <link rel="stylesheet" href="template/css/footer.css">
     <link rel="stylesheet" href="template/css/product.css">
-    <link rel="stylesheet" href="lib/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="lib/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <link rel="icon" href="img/logoshop.png" type="image/gif">
     <title>Sản Phẩm</title>
 </head>
 
 <body>
+    <div id="hideContent" class=""></div>
     <section class="navbar-left-box">
-        <div id="hideContent" class=""></div>
+        
         <div id="navbar-active" class="navbar-left">
             <div class="visual">
                 <a href="">
@@ -244,8 +245,8 @@
                 </button>
                 <a class="navbar-brand" href="index.html"><img src="img/logoshop.png" alt=""></a>
                 <div class="header-nav-card">
-                    <button class="btn-search" id="btnSearchNav" type="button"><span><i class="fa fa-search"
-                                aria-hidden="true"></i></span></button>
+                    <button class="btn-search" id="btnSearchNav" type="button" style="outline: none"><span><i
+                                class="fa fa-search" aria-hidden="true"></i></span></button>
                     <a href=""><span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
 
                 </div>
@@ -296,7 +297,7 @@
 
     <!-- button filter  -->
     <div class="button-filter-box">
-        <button class="btn-active-filter"><span><i class="fas fa-filter"></i></span></button>
+        <button class="btn-active-filter" id="btnActiveFilter"><span><i class="fas fa-filter"></i></span></button>
     </div>
 
     <!-- Main cotent -->
@@ -318,7 +319,8 @@
                 <div class="filter-search col-lg-3 col-md-4 col-sm-6">
                     <form action="" class="form-search">
                         <input type="text" class="form-control" placeholder="Tìm kiếm...">
-                        <button type="submit" class="btn-search-submit"><span><i class="fas fa-search"></i></span></button>
+                        <button type="submit" class="btn-search-submit"><span><i
+                                    class="fas fa-search"></i></span></button>
                     </form>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -333,11 +335,11 @@
             </div>
 
             <div class="row box-element">
-                <div class="col-lg-3 col-md-4 col-sm-12 filter-box-all">
+                <div class="col-lg-3 col-md-4 col-sm-12 filter-box-all" id="optionFilterBox">
                     <div class="filter-box">
                         <div class="filter-title">
                             <h5>Thương Hiệu</h5>
-                            <button class="btn-active-filter-box">-</button>
+                            <button class="btn-active-filter-box" style="outline: none;">-</button>
                         </div>
                         <ul class="list-cate" id="filterCate">
                             <li>
@@ -366,7 +368,7 @@
                     <div class="filter-box">
                         <div class="filter-title">
                             <h5>Thể Loại</h5>
-                            <button class="btn-active-filter-box" class="btn">-</button>
+                            <button class="btn-active-filter-box" class="btn" style="outline: none">-</button>
                         </div>
                         <ul class="list-cate" id="filterCate">
                             <li>
@@ -392,9 +394,9 @@
                         </ul>
                     </div>
                     <div class="filter-box">
-                        <div class="filter-title" >
+                        <div class="filter-title">
                             <h5>Size</h5>
-                            <button class="btn-active-filter-box" class="btn">-</button>
+                            <button class="btn-active-filter-box" class="btn" style="outline: none">-</button>
                         </div>
                         <ul class="list-size-filter" id="filterCate">
                             <li>
@@ -420,34 +422,28 @@
                     <div class="filter-box">
                         <div class="filter-title">
                             <h5>Màu Sắc</h5>
-                            <button class="btn-active-filter-box" class="btn">-</button>
+                            <button class="btn-active-filter-box" class="btn" style="outline: none">-</button>
                         </div>
-                        <ul class="list-size-filter list-color" id="filterCate">
+                        <ul class="list-cate" id="filterCate">
                             <li>
-                                <a href="" style="background-color: red;"></a>
-                                
+                                <input type="checkbox" class="" />
+                                <label for="">Đỏ</label>
                             </li>
                             <li>
-                                <a href="" style="background-color: yellow;"></a>
-                                
+                                <input type="checkbox" class="" />
+                                <label for="">Vàng</label>
                             </li>
                             <li>
-                                <a href="" style="background-color: orange;"></a>
+                                <input type="checkbox" class="" />
+                                <label for="">Cam</label>
                             </li>
                             <li>
-                                <a href="" style="background-color: black;"></a>
+                                <input type="checkbox" class="" />
+                                <label for="">Hồng</label>
                             </li>
                             <li>
-                                <a href="" style="background-color: pink;"></a>
-                            </li>
-                            <li>
-                                <a href="" style="background-color: blueviolet;"></a>
-                            </li>
-                            <li>
-                                <a href="" style="background-color: white;"></a>
-                            </li>
-                            <li>
-                                <a href="" style="background-color: blueviolet;"></a>
+                                <input type="checkbox" class="" />
+                                <label for="">Nâu</label>
                             </li>
                         </ul>
                     </div>
@@ -711,117 +707,32 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="pagination-box">
+                            <nav aria-label="Page navigation example" >
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item "><a class="page-link active-pagination" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                    
+
                 </div>
 
             </div>
-            <div class="box-element">
-                <div class="title-box mb-4">
-                    <h1>SẢN PHẨM LIÊN QUAN</h1>
-                </div>
-                <div class="row mb-4 products">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 item">
-                        <div class="product-item">
 
-                            <div class="card" style="">
-                                <div class="card-img">
-                                    <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                    <div class="add-cart-box">
-                                        <a href="">
-                                            <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                            THÊM VÀO GIỎ HÀNG
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <a href="">
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                    </a>
-                                    <p class="card-text">500.000 ₫</p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 item">
-                        <div class="product-item">
-
-                            <div class="card" style="">
-                                <div class="card-img">
-                                    <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                    <div class="add-cart-box">
-                                        <a href="">
-                                            <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                            THÊM VÀO GIỎ HÀNG
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <a href="">
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                    </a>
-                                    <p class="card-text">500.000 ₫</p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 item">
-                        <div class="product-item">
-
-                            <div class="card" style="">
-                                <div class="card-img">
-                                    <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                    <div class="add-cart-box">
-                                        <a href="">
-                                            <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                            THÊM VÀO GIỎ HÀNG
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <a href="">
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                    </a>
-                                    <p class="card-text">500.000 ₫</p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 item">
-                        <div class="product-item">
-
-                            <div class="card" style="">
-                                <div class="card-img">
-                                    <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                    <div class="add-cart-box">
-                                        <a href="">
-                                            <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                            THÊM VÀO GIỎ HÀNG
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <a href="">
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                    </a>
-                                    <p class="card-text">500.000 ₫</p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="box-btn font-text-2 mb-3">
-                    <a href="" class=" btn-viewmore">Xem thêm</a>
-                </div>
-            </div>
             <!-- slide logo -->
             <div class="list-slide-logo box-element">
                 <div class="owl-carousel owl-theme" id="owlCarouselLogo">
@@ -921,7 +832,7 @@
     <script src="template/js/header.js"></script>
     <script src="template/js/footer.js"></script>
     <script src="template/js/product.js"></script>
-    <script src="lib/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>

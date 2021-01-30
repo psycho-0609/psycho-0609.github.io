@@ -20,4 +20,15 @@ $(document).ready(function(){
             }
         })
     })
+
+
+    // Filter box active
+    $("#btnActiveFilter").click(function(){
+        $("#hideContent").addClass("display-bg-behind-filter");
+        $("#optionFilterBox").addClass("filter-box-all-active");
+    })
+    $("#hideContent").click(function () {
+        $("#hideContent").removeClass("display-bg-behind-filter");
+        $("#optionFilterBox").removeClass("filter-box-all-active");
+    })
 })
