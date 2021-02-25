@@ -43,7 +43,7 @@
             <div class="navbar-left-content">
                 <div class="navbar-left-item">
                     <span><i class="fas fa-home"></i></span>
-                    <a href="" class="active-nav">Trang chủ</a>
+                    <a href="index.html" class="active-nav">Trang chủ</a>
                 </div>
                 <div>
                     <div class="navbar-left-item">
@@ -55,19 +55,19 @@
                         </a>
                     </div>
                     <div id="dropdownMenuProduct" class="dropdown-menu-product">
-                        <a href="">Ao</a>
-                        <a href="">Quần</a>
+                        <a href="shirt.html">Ao</a>
+                        <a href="pant.html">Quần</a>
                         <a href="shoes.html">Giày</a>
-                        <a href="">Phụ Kiện</a>
+                        <a href="accessories.html">Phụ Kiện</a>
                     </div>
                 </div>
                 <div class="navbar-left-item">
                     <span><i class="far fa-newspaper"></i></span>
-                    <a href="">Tin Tức</a>
+                    <a href="blog.html">Tin Tức</a>
                 </div>
                 <div class="navbar-left-item">
                     <span><i class="fas fa-map"></i></span>
-                    <a href="">Liên Hệ</a>
+                    <a href="contact.html">Liên Hệ</a>
                 </div>
             </div>
         </div>
@@ -103,32 +103,34 @@
                                     <div class="form-group row">
                                         <label for="inputEmail3" class="col-sm-3 col-form-label">Email / SĐT</label>
                                         <div class="col-sm-9">
-                                            <input type="text" required class="form-control" id="inputEmail3"
+                                            <input type="text" class="form-control" id="inputEmailLogin"
                                                 placeholder="Nhập Email hoặc Số điện thoại">
+                                            <span id="errorInputEmailLogin" class="error-message"></span>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-3 col-form-label">Mật Khẩu</label>
                                         <div class="col-sm-9">
-                                            <input type="password" required class="form-control" id="inputPassword3"
+                                            <input type="password" class="form-control" id="inputPasswordLogin"
                                                 placeholder="Mật khẩu từ 9 đến 32 ký tự">
+                                            <span id="errorInputPassLogin" class="error-message"></span>
                                         </div>
                                     </div>
                                     </fieldset>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-3 col-form-label"></label>
                                         <div class="col-sm-9">
-                                            <div>Quên mật khẩu? Nhấn tại <a href=""> đây</a></div>
+                                            <div>Quên mật khẩu? Nhấn tại <a href="#"> đây</a></div>
                                         </div>
 
                                     </div>
                                     <div class="form-group row my-4">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
-                                            <button type="submit" class="my-2 btn-login btn w-100">Đăng nhập</button>
-                                            <button type="submit" class="my-2 btn-login-google btn w-100">Đăng nhập bằng
+                                            <button type="submit" id="btnSubmitLogin" class="my-2 btn-login btn w-100">Đăng nhập</button>
+                                            <button type="button" class="my-2 btn-login-google btn w-100">Đăng nhập bằng
                                                 Google++</button>
-                                            <button type="submit" class="my-2 btn-login-facebook btn w-100">Đăng nhập
+                                            <button type="button" class="my-2 btn-login-facebook btn w-100">Đăng nhập
                                                 bằng Facebook</button>
                                         </div>
                                     </div>
@@ -140,29 +142,33 @@
                                     <div class="form-group row">
                                         <label for="inputEmail3" class="col-sm-3 col-form-label">Họ Tên</label>
                                         <div class="col-sm-9">
-                                            <input type="text" required class="form-control" id="inputEmail3"
+                                            <input type="text" required class="form-control" id="inputNameRegis"
                                                 placeholder="Nhập họ tên">
+                                                <span id="errorInputNameRegis" class="error-message"></span>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-3 col-form-label">SĐT</label>
                                         <div class="col-sm-9">
-                                            <input type="number" required class="form-control" id="inputPassword3"
+                                            <input type="number" required class="form-control" id="inputPhoneRegis"
                                                 placeholder="Nhập số điện thoại">
+                                            <span id="errorInputPhoneRegis" class="error-message"></span>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-3 col-form-label">Email</label>
                                         <div class="col-sm-9">
-                                            <input type="email" required class="form-control" id="inputPassword3"
+                                            <input type="email" required class="form-control" id="inputEmailRegis"
                                                 placeholder="Nhập email">
+                                            <span id="errorInputEmailRegis" class="error-message"></span>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-3 col-form-label">Mật Khẩu</label>
                                         <div class="col-sm-9">
-                                            <input type="password" required class="form-control" id="inputPassword3"
+                                            <input type="password" required class="form-control" id="inputPasswordRegis"
                                                 placeholder="Mật khẩu từ 9 đến 32 ký tự">
+                                            <span id="errorInputPassRegis" class="error-message"></span>
                                         </div>
                                     </div>
                                     <fieldset class="form-group row">
@@ -185,30 +191,32 @@
                                         <label for="inputPassword3" class="col-sm-3 col-form-label">Ngày Sinh</label>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectDay">Ngày</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectDay" required>
-                                                <option selected>Ngày</option>
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectDay" >
+                                                <option selected value="-1">Ngày</option>
 
                                             </select>
+                                            
                                         </div>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectMonth">Tháng</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectMonth" required>
-                                                <option selected>Tháng</option>
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectMonth" >
+                                                <option selected value="-1">Tháng</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectYear">Năm</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectYear" required>
-                                                <option selected>Năm</option>
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectYear" >
+                                                <option selected value="-1">Năm</option>
 
                                             </select>
                                         </div>
-
+                                        <div class="col-sm-3"></div>
+                                        <span id="errorSelectDate" class="error-message col-sm-9" style="padding-left:1rem ;"></span>
                                     </div>
                                     <div class="form-group row my-4">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
-                                            <button type="submit" class="my-2 btn-login btn w-100">Tạo tài
+                                            <button type="submit" id="btnSubmitRegis" class="my-2 btn-login btn w-100">Tạo tài
                                                 khoản</button>
                                         </div>
                                     </div>
@@ -252,9 +260,10 @@
                 </button>
                 <a class="navbar-brand" href="index.html"><img src="img/logoshop.png" alt=""></a>
                 <div class="header-nav-card">
-                    <button class="btn-search" id="btnSearchNav" type="button"><span><i class="fa fa-search" aria-hidden="true"></i></span></button>
-                    <a href=""><span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
-                    
+                    <button class="btn-search" id="btnSearchNav" type="button"><span><i class="fa fa-search"
+                                aria-hidden="true"></i></span></button>
+                    <a href="cart.html"><span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
+
                 </div>
                 <div class="nav-search-box" id="navSearchBox">
                     <div class="nav-icon-search"><span><i class="fa fa-search" aria-hidden="true"></i></span></div>
@@ -262,24 +271,24 @@
                 </div>
                 <div class="collapse navbar-collapse main-menu" id="navbarNav">
                     <div class="navbar-nav navbar-menu">
-                        <div class="nav-item active-nav"><a href="" class="">Trang chủ</a></div>
+                        <div class="nav-item active-nav"><a href="index.html" class="">Trang chủ</a></div>
                         <div class="nav-item dropdown">
                             <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Sản Phẩm
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Ao</a>
-                                <a class="dropdown-item" href="#">Quan</a>
-                                <a class="dropdown-item" href="#">Giay</a>
-                                <a class="dropdown-item" href="#">Phu Kien</a>
+                                <a class="dropdown-item" href="shirt.html">Ao</a>
+                                <a class="dropdown-item" href="pant.html">Quan</a>
+                                <a class="dropdown-item" href="shoes.html">Giay</a>
+                                <a class="dropdown-item" href="accessories.html">Phu Kien</a>
                             </div>
                         </div>
-                        <div class="nav-item"><a href="">Tin Tức</a>
+                        <div class="nav-item"><a href="blog.html">Tin Tức</a>
 
                         </div>
 
-                        <div class="nav-item"><a href="">Liên Hệ</a></div>
+                        <div class="nav-item"><a href="contact.html">Liên Hệ</a></div>
                     </div>
                     <ul class="navbar-nav navbar-icon ml-auto">
                         <li class="nav-item">
@@ -292,7 +301,7 @@
                                         aria-hidden="true"></i></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span class=""><i class="fa fa-shopping-cart"
+                            <a class="nav-link" href="cart.html"><span class=""><i class="fa fa-shopping-cart"
                                         aria-hidden="true"></i></span></a>
                         </li>
                     </ul>
@@ -357,29 +366,30 @@
             <div class="row list-category box-element">
                 <div class="col-lg-3 col-md-6 col-sm-6 item-cate">
                     <div class="about-picture">
-                        <a href=""><img class="img-cate" src="img/category/1.png" alt=""></a>
-                        <div class="picture-title">Áo</div>
+                        <a href="shirt.html"><img class="img-cate" src="img/category/1.png" alt=""></a>
+                        <a href="shirt.html"><div class="picture-title">Áo</div></a>
                     </div>
 
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 item-cate">
                     <div class="about-picture">
-                        <a href=""><img class="img-cate" src="img/category/image2.png" alt=""></a>
-                        <div class="picture-title">Quần</div>
+                        <a href="pant.html"><img class="img-cate" src="img/category/image2.png" alt=""></a>
+                        <a href="pant.html"><div class="picture-title">Quần</div></a>
                     </div>
 
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 item-cate">
                     <div class="about-picture">
-                        <a href=""><img class="img-cate" src="img/category/img3.png" alt=""></a>
-                        <div class="picture-title">Giày</div>
+                        <a href="shoes.html"><img class="img-cate" src="img/category/img3.png" alt=""></a>
+                        <a href="shoes.html"><div class="picture-title">Giày</div></a>
+
                     </div>
 
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 item-cate">
                     <div class="about-picture">
-                        <a href=""><img class="img-cate" src="img/category/img4.png" alt=""></a>
-                        <div class="picture-title">Phụ Kiện</div>
+                        <a href="accessories.html"><img class="img-cate" src="img/category/img4.png" alt=""></a>
+                        <a href="accessories.html"><div class="picture-title">Phụ Kiện</div></a>
                     </div>
 
                 </div>
@@ -819,7 +829,7 @@
                     </div>
                 </div>
                 <div class="box-btn font-text-2 mb-3">
-                    <a href="" class=" btn-viewmore">Xem thêm</a>
+                    <a href="" class=" btn-viewmore" class="btn-blog-detail">Xem thêm</a>
                 </div>
             </div>
 
@@ -844,7 +854,7 @@
                                             typesetting industry.
                                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                         </p>
-                                        <a href="">Chi tiết >></a>
+                                        <a href="" class="btn-blog-detail">Chi tiết >></a>
                                     </div>
 
                                 </div>
@@ -865,7 +875,7 @@
                                             typesetting industry.
                                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                         </p>
-                                        <a href="">Chi tiết >></a>
+                                        <a href="" class="btn-blog-detail">Chi tiết >></a>
                                     </div>
 
                                 </div>
@@ -886,7 +896,7 @@
                                             typesetting industry.
                                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                         </p>
-                                        <a href="">Chi tiết >></a>
+                                        <a href="" class="btn-blog-detail">Chi tiết >></a>
                                     </div>
 
                                 </div>
@@ -898,8 +908,11 @@
                     <a href="" class=" btn-viewmore">Xem thêm</a>
                 </div>
             </div>
+        </div>
 
-            <!-- slide logo -->
+    </main>
+    <footer>
+        <div class="container">
             <div class="list-slide-logo box-element">
                 <div class="owl-carousel owl-theme" id="owlCarouselLogo">
                     <div class="item"><img src="img/slidelogo/logo1.png" alt=""></div>
@@ -911,81 +924,81 @@
                 </div>
             </div>
         </div>
-
-    </main>
-    <footer>
-        <div class="footer-service">
-            <div class="container">
-                <div class="row">
-                    <div class=" col-lg-4 col-md-6 col-sm-12 footer-service-box">
-                        <div class="footer-icon-service"><span><i class="fas fa-paper-plane"></i></span></div>
-                        <div class="footer-content-serivce">
-                            <span>FREE SHIPPING</span>
-                            <span>ĐƠN HÀNG TRÊN 500.000</span>
+        <div class="footer-area">
+            <div class="footer-service">
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-lg-4 col-md-6 col-sm-12 footer-service-box">
+                            <div class="footer-icon-service"><span><i class="fas fa-paper-plane"></i></span></div>
+                            <div class="footer-content-serivce">
+                                <span>FREE SHIPPING</span>
+                                <span>ĐƠN HÀNG TRÊN 500.000</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 footer-service-box">
-                        <div class="footer-icon-service"><span><i class="fas fa-sync"></i></span></div>
-                        <div class="footer-content-serivce">
-                            <span>ĐỔI TRẢ</span>
-                            <span>5 NGÀY ĐỔI TRẢ MIỄN PHÍ</span>
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-service-box">
+                            <div class="footer-icon-service"><span><i class="fas fa-sync"></i></span></div>
+                            <div class="footer-content-serivce">
+                                <span>ĐỔI TRẢ</span>
+                                <span>5 NGÀY ĐỔI TRẢ MIỄN PHÍ</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 footer-service-box">
-                        <div class="footer-icon-service"><span><i class="far fa-credit-card"></i></span></div>
-                        <div class="footer-content-serivce">
-                            <span>THANH TOÁN</span>
-                            <span>CHẤP NHẬN TẤT CẢ LOẠI THẺ</span>
+                        <div class="col-lg-4 col-md-12 col-sm-12 footer-service-box">
+                            <div class="footer-icon-service"><span><i class="far fa-credit-card"></i></span></div>
+                            <div class="footer-content-serivce">
+                                <span>THANH TOÁN</span>
+                                <span>CHẤP NHẬN TẤT CẢ LOẠI THẺ</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-infor">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-12 footer-infor-item">
-                        <div class="footer-infor-title">
-                            <h5>Men's Shop</h5>
-                            <p>Cửa hàng thời trang nam mang phong cách mới lạ</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 footer-infor-item">
-                        <div class="footer-infor-title">
-                            <h5>Hỗ Trợ Mua Hàng</h5>
-                            <div class="footer-list-service">
-                                <a href=""><span><i class="fas fa-angle-right"></i></span> Hướng dẫn mua hàng</a>
-                                <a href=""><span><i class="fas fa-angle-right"></i></span> Hướng dẫn tranh toán</a>
-                                <a href=""><span><i class="fas fa-angle-right"></i></span> Phương thức vẫn chuyển</a>
-                                <a href=""><span><i class="fas fa-angle-right"></i></span> Tra cứu đơn hàng</a>
+            <div class="footer-infor">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-infor-item">
+                            <div class="footer-infor-title">
+                                <h5>Men's Shop</h5>
+                                <p>Cửa hàng thời trang nam mang phong cách mới lạ</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 footer-infor-item">
-                        <div class="footer-infor-title">
-                            <h5>Theo Dõi Chúng Tôi</h5>
-                            <div class="follow-icon">
-                                <a href=""><span style="color: #3B5A9A;"><i
-                                            class="fab fa-facebook-square"></i></span></a>
-                                <a href=""><span style="color: #42C8F4;"><i
-                                            class="fab fa-twitter-square"></i></span></a>
-                                <a href=""><span style="color: #F8BC2E;"><i class="fab fa-skype"></i></span></a>
-                                <a href=""><span style="color: #CE3633;"><i
-                                            class="fab fa-google-plus-square"></i></span></a>
-                                <a href=""><span style="color: #040707;"><i class="fab fa-behance-square"></i>
-                                    </span></a>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-infor-item">
+                            <div class="footer-infor-title">
+                                <h5>Hỗ Trợ Mua Hàng</h5>
+                                <div class="footer-list-service">
+                                    <a href=""><span><i class="fas fa-angle-right"></i></span> Hướng dẫn mua hàng</a>
+                                    <a href=""><span><i class="fas fa-angle-right"></i></span> Hướng dẫn tranh toán</a>
+                                    <a href=""><span><i class="fas fa-angle-right"></i></span> Phương thức vẫn
+                                        chuyển</a>
+                                    <a href=""><span><i class="fas fa-angle-right"></i></span> Tra cứu đơn hàng</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 footer-infor-item">
-                        <div class="footer-infor-title">
-                            <h5>Thanh Toán</h5>
-                            <p>Chúng tôi chấp nhận thanh toán với tất cả loại thẻ</p>
-                            <div class="atm-icon">
-                                <span style="color: #3B5A9A;"><i class="fab fa-cc-visa"></i></span>
-                                <span style="color: #CE3633;"><i class="fab fa-cc-mastercard"></i></span>
-                                <span style="color: #42C8F4;"><i class="fab fa-cc-paypal"></i></span>
-                                <span style="color: #F8BC2E;"><i class="fab fa-cc-jcb"></i></span>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-infor-item">
+                            <div class="footer-infor-title">
+                                <h5>Theo Dõi Chúng Tôi</h5>
+                                <div class="follow-icon">
+                                    <a href=""><span style="color: #3B5A9A;"><i
+                                                class="fab fa-facebook-square"></i></span></a>
+                                    <a href=""><span style="color: #42C8F4;"><i
+                                                class="fab fa-twitter-square"></i></span></a>
+                                    <a href=""><span style="color: #F8BC2E;"><i class="fab fa-skype"></i></span></a>
+                                    <a href=""><span style="color: #CE3633;"><i
+                                                class="fab fa-google-plus-square"></i></span></a>
+                                    <a href=""><span style="color: #040707;"><i class="fab fa-behance-square"></i>
+                                        </span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-infor-item">
+                            <div class="footer-infor-title">
+                                <h5>Thanh Toán</h5>
+                                <p>Chúng tôi chấp nhận thanh toán với tất cả loại thẻ</p>
+                                <div class="atm-icon">
+                                    <span style="color: #3B5A9A;"><i class="fab fa-cc-visa"></i></span>
+                                    <span style="color: #CE3633;"><i class="fab fa-cc-mastercard"></i></span>
+                                    <span style="color: #42C8F4;"><i class="fab fa-cc-paypal"></i></span>
+                                    <span style="color: #F8BC2E;"><i class="fab fa-cc-jcb"></i></span>
+                                </div>
                             </div>
                         </div>
                     </div>

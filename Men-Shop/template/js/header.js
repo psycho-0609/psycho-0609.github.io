@@ -99,6 +99,86 @@ $(document).ready(function () {
     createMonth();
     createYear(1920);
 
+    $("#btnSubmitLogin").click(function(e){
+        e.preventDefault();
+        checkValidateLogin();
+    })
+    function checkValidateLogin(){
+        let email = $("#inputEmailLogin");
+        let password = $("#inputPasswordLogin");
+        let errEmail = $("#errorInputEmailLogin");
+        let errPass = $("#errorInputPassLogin");
+
+        if(email.val() == ""){
+            errEmail.text("Vui lòng nhập tên Email/SĐT");
+        }else{
+            errEmail.text("");
+        }
+
+        if(password.val().length < 9 || password.val().length > 32){
+            errPass.text("Mật khẩu từ 9 đến 32 ký tự");
+        }else{
+            errPass.text("");
+        }
+
+    }
+
+    $("#btnSubmitRegis").click(function(e){
+        e.preventDefault();
+        checkValidReisAcc();
+    })
+
+    function checkValidReisAcc(){
+        let name = $("#inputNameRegis");
+        let phone = $("#inputPhoneRegis");
+        let email = $("#inputEmailRegis");
+        let password = $("#inputPasswordRegis");
+        let day = $("#formSigninSlectDay")
+        let month = $("#formSigninSlectMonth");
+        let year = $("#formSigninSlectYear");
+        let errName = $("#errorInputNameRegis");
+        let errPhone = $("#errorInputPhoneRegis");
+        let errEmail = $("#errorInputEmailRegis");
+        let errPass = $("#errorInputPassRegis");
+        let errDate = $("#errorSelectDate");
+
+        if(name.val() == ""){
+            errName.text("Nhập tên của bạn")
+        }else{
+            errName.text("")
+        }
+        
+        if(phone.val().length != 10){
+            errPhone.text("Số điện thoại phải 10 số")
+        }else{
+            errPhone.text("");
+        }
+
+        if(!validateEmail(email.val())){
+            errEmail.text("Email không đúng định dạng");
+        }
+        else{
+            errEmail.text("");
+        }
+        if(password.val().length < 9 || password.val().length > 32){
+            errPass.text("Mật khẩu phải từ 9 đến 32 ký tự")
+        }else{
+            errPass.text("");
+        }
+        if(day.val() <= 0 || month.val() <= 0 || year.val() <= 0){
+            errDate.text("Chọn ngày sinh của bạn")
+        }else{
+            errDate.text("");
+        }
+
+        
+    }
+
+    function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
 
 
 

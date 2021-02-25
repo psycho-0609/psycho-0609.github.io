@@ -227,17 +227,18 @@ header {
     font-size: 1.4rem;
     border: 2px solid #fff;
     outline: none;
-    background: none;
-    color: #fff;
+    /* background: none; */
+    background-color: rgba(255, 255, 255,1);
+    
 }
 .btn-submit-search {
+    outline: none;
     position: absolute;
     right: 5%;
     top: 50%;
     transform: translate(-50%, -50%);
     border: none;
     font-size: 2rem;
-    color: #fff;
     background: none;
     font-weight: unset;
 }
@@ -316,4 +317,12 @@ header {
         border-bottom: 2px solid #08bbb7;
         padding-bottom: 5px;
     }
+}
+
+.error-message{
+    display: block;
+    color: red;
+    font-size: .8rem;
+    padding-left: .3rem;
+    padding-top: .2rem;
 }

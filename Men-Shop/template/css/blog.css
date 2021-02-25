@@ -1,0 +1,44 @@
+/* card blog */
+.card-blog {
+    padding: 0 0 2rem 0;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+.card-blog {
+    margin-bottom: 2rem;
+}
+.blog-content {
+    text-align: left;
+    padding: 0;
+}
+.blog-content h3 {
+    font-family: "Playfair Display", serif;
+    /* margin: 0; */
+    font-size: 2rem;
+    /* font-weight: bold; */
+    padding-top: 1.7rem;
+}
+.blog-content h3 a {
+    color: inherit;
+}
+.blog-content h3 a:hover {
+    color: #08bbb7;
+}
+.card-infor-area {
+    margin-bottom: 1rem;
+}
+.card-infor-area span {
+    margin-right: 0.3rem;
+    font-size: 0.8rem;
+    color: rgb(91, 91, 91);
+}
+.blog-content .card-text {
+    color: rgb(81, 81, 81);
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 1.5rem;
+}
+.btn-blog-viewdetail {
+    color: #08bbb7;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+}

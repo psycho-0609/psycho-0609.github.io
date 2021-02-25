@@ -1,0 +1,88 @@
+/* Detail product */
+/* .detail-product-box{
+
+} */
+.detail-product-img{
+    margin-bottom: 1rem;
+}
+.detail-product-img img{
+    max-height: 650px;
+}
+.list-img-product button{
+    width: 5rem;
+    border: none;
+    margin: .2rem 0;
+    /* outline: none; */
+}
+
+.detail-product-title{
+    font-family:  'Roboto', sans-serif;
+    font-weight: bold;
+}
+.price{
+    font-size: 1.3rem;
+    color: #08BBB7;
+    font-weight: bold;
+    font-family:  'Roboto', sans-serif;
+}
+.select-size{
+    width: 5rem;
+}
+.status-product{
+    padding: 1rem 0;
+}
+.status-product span{
+    color: #6dbe14;
+    /* padding: .1rem 1rem; */
+    border-radius: 20px;
+}
+.form-cate{
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.form-cate label{
+    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+    margin-right: 1.5rem;
+}
+.input-amount-box{
+    border: 1px solid #f5f5f5;
+}
+.input-amount-box input{
+    width: 4rem;
+    text-align: center;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+.input-amount-box button{
+    width: 2.2rem;
+    text-align: center;
+    outline: none;
+    background-color: #f5f5f5;
+    font-weight: bold;
+    border: none;
+    height: 100%;
+}
+.btn-add-cart span{
+    margin-right: .3rem;
+    
+}
+.btn-add-cart{
+    border: none;
+    padding: .7rem 2rem;
+    background-color: rgb(255, 73, 73);
+    color: #fff;
+    margin-top: 1rem;
+}
+.infor-about-product{
+    padding-top: 2rem;
+}
+.infor-about-product span{
+    font-weight: 550;
+    display: block;
+    font-size: 1.3rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: .5rem;
+}
+

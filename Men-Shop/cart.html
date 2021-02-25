@@ -10,11 +10,15 @@
     <link rel="stylesheet" href="template/css/header.css">
     <link rel="stylesheet" href="template/css/main.css">
     <link rel="stylesheet" href="template/css/footer.css">
-    <link rel="stylesheet" href="template/css/product.css">
+    <link rel="stylesheet" href="template/css/cart.css">
+    <link rel="icon" href="img/logoshop.png" type="image/gif">
+    <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="lib/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
-    <link rel="icon" href="img/logoshop.png" type="image/gif">
-    <title>Sản Phẩm</title>
+    <link rel="stylesheet" href="lib/fontawesome-free-5.15.2-web/css/fontawesome.css">
+    <link rel="stylesheet" href="lib/fontawesome-free-5.15.2-web/css/brands.css">
+    <link rel="stylesheet" href="lib/fontawesome-free-5.15.2-web/css/solid.css">
+    <title>Giỏ Hàng</title>
 </head>
 
 <body>
@@ -50,7 +54,7 @@
                     <div id="dropdownMenuProduct" class="dropdown-menu-product">
                         <a href="shirt.html">Ao</a>
                         <a href="pant.html">Quần</a>
-                        <a href="shoes.html">Giày</a>
+                        <a href="shirt.html">Giày</a>
                         <a href="accessories.html">Phụ Kiện</a>
                     </div>
                 </div>
@@ -265,7 +269,7 @@
                 <div class="collapse navbar-collapse main-menu" id="navbarNav">
                     <div class="navbar-nav navbar-menu">
                         <div class="nav-item"><a href="index.html">Trang chủ</a></div>
-                        <div class="nav-item dropdown ">
+                        <div class="nav-item dropdown">
                             <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Sản Phẩm
@@ -273,15 +277,15 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="shirt.html">Ao</a>
                                 <a class="dropdown-item" href="pant.html">Quan</a>
-                                <a class="dropdown-item" href="shirt.html">Giay</a>
+                                <a class="dropdown-item" href="shoes.html">Giay</a>
                                 <a class="dropdown-item" href="accessories.html">Phu Kien</a>
                             </div>
                         </div>
-                        <div class="nav-item"><a href="blog.html">Tin Tức</a>
+                        <div class="nav-item active-nav"><a href="blog.html" class="">Tin Tức</a>
 
                         </div>
 
-                        <div class="nav-item"><a href="contact.html">Liên Hệ</a></div>
+                        <div class="nav-item"><a href="">Liên Hệ</a></div>
                     </div>
                     <ul class="navbar-nav navbar-icon ml-auto">
                         <li class="nav-item">
@@ -294,7 +298,7 @@
                                         aria-hidden="true"></i></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cart.html"><span class=""><i class="fa fa-shopping-cart"
+                            <a class="nav-link" href="#"><span class=""><i class="fa fa-shopping-cart"
                                         aria-hidden="true"></i></span></a>
                         </li>
                     </ul>
@@ -302,450 +306,121 @@
             </nav>
         </div>
     </header>
-
-    <!-- button filter  -->
-    <div class="button-filter-box">
-        <button class="btn-active-filter" id="btnActiveFilter"><span><i class="fas fa-filter"></i></span></button>
-    </div>
-
-    <!-- Main cotent -->
     <main>
-        <div class="container">
+        <div class="container box-element">
             <div class="banner-current-page box-element">
                 <img src="img/banner-current-page.png" alt="">
                 <div class="current-page-box">
-                    <h3 class="title-banner-page">Sản Phẩm</h3>
+                    <h3 class="title-banner-page">Giỏ Hàng</h3>
                     <div class="current-page-box-link">
-                        <a href="" class="link-previous-page">Trang chủ ></a>
-                        <span class="current-page"> Giày</span>
+                        <a href="index.html" class="link-previous-page">Trang chủ ></a>
+                        <span class="current-page"> Giỏ Hàng</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-lg-8 col-md-12">
+                    <div class="product-list">
+                        <div class="card-product-item">
+                            <div class="product-img">
+                                <img src="img/Shoes/img1.png" alt="">
+                            </div>
+                            <div class="cart-product-content">
+                                <div class="infor-product-area">
+                                    <p class="name-product">Nike Air Zoom Pegasus 37</p>
+                                    <p>Màu Sắc: Đen</p>
+                                    <p>Kích Cỡ: 39</p>
+
+                                    <a href="" class="btn-delete btn-delete-md">Xóa</a>
+                                </div>
+                                <div class="product-price">
+                                    <span>500.000 ₫</span>
+                                </div>
+                                <div class="product-quantity quantity-md">
+                                    <button>-</button>
+                                    <input type="text" value="1">
+                                    <button>+</button>
+                                </div>
+                                <div class="w-100 btn-delete btn-delete-sm"><a href="">Xóa</a></div>
+                            </div>
+
+                        </div>
+                        <div class="card-product-item">
+                            <div class="product-img">
+                                <img src="img/Shoes/img1.png" alt="">
+                            </div>
+                            <div class="cart-product-content">
+                                <div class="infor-product-area">
+                                    <p class="name-product">Nike Air Zoom Pegasus 37</p>
+                                    <p>Màu Sắc: Đen</p>
+                                    <p>Kích Cỡ: 39</p>
+                                    
+                                    <a href="" class="btn-delete btn-delete-md">Xóa</a>
+                                </div>
+                                <div class="product-price">
+                                    <span>500.000 ₫</span>
+                                </div>
+                                <div class="product-quantity quantity-md">
+                                    <button>-</button>
+                                    <input type="text" value="1">
+                                    <button>+</button>
+                                </div>
+                                <div class="w-100 btn-delete btn-delete-sm"><a href="">Xóa</a></div>
+                            </div>
+
+                        </div>
+                        <div class="card-product-item">
+                            <div class="product-img">
+                                <img src="img/Shoes/img1.png" alt="">
+                            </div>
+                            <div class="cart-product-content">
+                                <div class="infor-product-area">
+                                    <p class="name-product">Nike Air Zoom Pegasus 37</p>
+                                    <p>Màu Sắc: Đen</p>
+                                    <p>Kích Cỡ: 39</p>
+                                    <a href="" class="btn-delete btn-delete-md">Xóa</a>
+                                </div>
+                                <div class="product-price">
+                                    <span>500.000 ₫</span>
+                                </div>
+                                <div class="product-quantity ">
+                                    <button>-</button>
+                                    <input type="text" value="1">
+                                    <button>+</button>
+                                </div>
+                                <div class="w-100 btn-delete btn-delete-sm"><a href="">Xóa</a></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="card-voucher-area">
+                        <h4 class="card-title-voucher">Mã Giảm Giá</h4>
+                        <input type="text" class="form-control" placeholder="Nhập mã giảm giá">
+                        <button class="btn-apply-voucher">Áp Dụng</button>
+                    </div>
+                    <div class="cart-total-price-area">
+                        <div class="price-item">
+                            <span class="title-price">Tạm Tính</span>
+                            <span class="price">1.000.000 ₫</span>
+                        </div>
+                        <div class="price-item">
+                            <span class="title-price">Khuyến Mãi</span>
+                            <span class="price">0 ₫</span>
+                        </div>
+                        <div class="price-item">
+                            <span class="title-price">Thành Tiền</span>
+                            <span class="total-price">1.000.000 ₫</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="order.html" class="btn-order">Thanh Toán</a>
                     </div>
                 </div>
             </div>
 
-            <div class="row mb-4 search-order-box">
 
-                <div class="filter-search col-lg-3 col-md-4 col-sm-6">
-                    <form action="" class="form-search">
-                        <input type="text" class="form-control" placeholder="Tìm kiếm...">
-                        <button type="submit" class="btn-search-submit"><span><i
-                                    class="fas fa-search"></i></span></button>
-                    </form>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="form-group order-by">
-
-                        <select id="my-select" class="custom-select" name="">
-                            <option>Sắp xếp</option>
-                        </select>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row box-element">
-                <div class="col-lg-3 col-md-4 col-sm-12 filter-box-all" id="optionFilterBox">
-                    <div class="filter-box">
-                        <div class="filter-title">
-                            <h5>Thương Hiệu</h5>
-                            <button class="btn-active-filter-box" style="outline: none;">-</button>
-                        </div>
-                        <ul class="list-cate" id="filterCate">
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Nike</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Dior</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Owen</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Bitis Hunter</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Uniqlo</label>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="filter-box">
-                        <div class="filter-title">
-                            <h5>Thể Loại</h5>
-                            <button class="btn-active-filter-box" class="btn" style="outline: none">-</button>
-                        </div>
-                        <ul class="list-cate" id="filterCate">
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">T-Shirt</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Áo len</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Áo sơ mi</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Áo khoác</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Áo thun</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="filter-box">
-                        <div class="filter-title">
-                            <h5>Size</h5>
-                            <button class="btn-active-filter-box" class="btn" style="outline: none">-</button>
-                        </div>
-                        <ul class="list-size-filter" id="filterCate">
-                            <li>
-                                <a href="">39</a>
-                            </li>
-                            <li>
-                                <a href="">40</a>
-                            </li>
-                            <li>
-                                <a href="">41</a>
-                            </li>
-                            <li>
-                                <a href="">42</a>
-                            </li>
-                            <li>
-                                <a href="">43</a>
-                            </li>
-                            <li>
-                                <a href="">44</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="filter-box">
-                        <div class="filter-title">
-                            <h5>Màu Sắc</h5>
-                            <button class="btn-active-filter-box" class="btn" style="outline: none">-</button>
-                        </div>
-                        <ul class="list-cate" id="filterCate">
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Đỏ</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Vàng</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Cam</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Hồng</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" class="" />
-                                <label for="">Nâu</label>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="col-lg-9 col-md-8 col-sm-12 mb-4">
-                    <div class="row products">
-
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class="product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href="detailProduct.html"><img src="img/Shoes/img1.png" class="card-img-top"
-                                                alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href="detailProduct.html">
-                                            <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        </a>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class=" product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href="detailProduct.html"><img src="img/Shoes/img1.png" class="card-img-top"
-                                                alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="detailProduct.html">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href="detailProduct.html">
-                                            <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        </a>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class=" product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href="detailProduct.html">
-                                            <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        </a>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class="product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href="detailProduct.html">
-                                            <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        </a>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class=" product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href=""></a>
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class=" product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href=""></a>
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class=" product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href=""></a>
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class=" product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href=""></a>
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class=" product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href=""></a>
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class=" product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href=""></a>
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class=" product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href=""></a>
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 item">
-                            <div class=" product-item">
-                                <div class="card" style="">
-                                    <div class="card-img">
-                                        <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                        <div class="add-cart-box">
-                                            <a href="">
-                                                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                                THÊM VÀO GIỎ HÀNG
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href=""></a>
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                        <p class="card-text"> <span>500.000 </span>₫</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pagination-box">
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item "><a class="page-link active-pagination" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
 
         </div>
     </main>
@@ -845,11 +520,9 @@
         </div>
     </footer>
 
-
     <script src="template/js/jquery-3.5.1.js"></script>
-    <script src="template/js/header.js"></script>
     <script src="template/js/footer.js"></script>
-    <script src="template/js/product.js"></script>
+    <script src="template/js/header.js"></script>
     <script src="lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>

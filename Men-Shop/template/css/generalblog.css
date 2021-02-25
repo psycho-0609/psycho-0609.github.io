@@ -1,0 +1,103 @@
+
+/*/////////////// sibar right ////////////*/
+
+
+/* form search */
+.blog-form-search{
+    position: relative;
+}
+.blog-form-search input{
+    padding-right: 2rem;
+}
+.blog-form-search .btn-submit-search{
+    position: absolute;
+    height: 100%;
+    outline: none;
+    border: none;
+    right: 0;
+    bottom: 0;
+    color: #000;
+    font-size: 1rem;
+}
+
+/* category */
+
+/* title blog */
+.heading-blog {
+    font-family: "Playfair Display", serif;
+    color: #08bbb7;
+    border-bottom: 1px solid #08bbb7;
+    padding-bottom: 0.2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+.blog-category-filter .list-category li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+.blog-category-filter .list-category li a {
+    font-family: "Roboto", sans-serif;
+    display: inline-block;
+    color: #000000;
+    transform: translateX(0);
+    transition: 0.5s all;
+}
+.blog-category-filter .list-category li a span {
+    margin-right: 0.3rem;
+}
+.blog-category-filter .list-category li a:hover {
+    transform: translateX(15px);
+    color: #08bbb7;
+    transition: 0.5s all;
+}
+
+.blog-sidebar-content .blog-category-filter, .post-popular, form{
+    margin-bottom: 2.5rem;
+}
+
+/* blog popular */
+.post-popular-card {
+    display: flex;
+    margin-bottom: 1rem;
+}
+.post-img{
+    width: 30%;
+}
+.post-content{
+    width: 70%;
+    padding-left: 1rem;
+}
+.post-content h5 a{
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: inherit;
+}
+.post-content h5 a:hover{
+    color: #08bbb7;
+}
+.post-content .post-time, .post-user{
+    font-size: .8rem;
+}
+.post-content .post-time span , .post-user span{
+    color: rgb(160, 160, 160);
+}
+.pagination-box{
+    padding: 0;
+}
+
+/* tag */
+.post-tag .tag-box .tag-item{
+    color: white;
+    background-color: rgb(150, 150, 150);
+    padding: .2rem .5rem;
+    display: inline-block;
+    margin: 0 .5rem .5rem 0;
+    border-radius: 5px;
+    font-size: .9rem;
+
+}
+.post-tag .tag-box .tag-item:hover{
+    background-color: #08bbb7;
+}

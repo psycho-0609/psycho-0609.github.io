@@ -1,31 +1,3 @@
-/* Panner breadcrumb */
-.banner-current-page{
-    margin-top: 3rem;
-    width: 100%;
-    position: relative;
-}
-.current-page-box{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translate(0,-50%);
-}
-.current-page-box .title-banner-page{
-    color: white;
-    font-family: 'Playfair Display', serif;
-}
-.link-previous-page{
-    color: rgb(220, 220, 220);
-    font-family: 'Roboto', sans-serif;
-}
-.link-previous-page:hover{
-    color: white;
-}
-.current-page{
-    color: #08BBB7;
-    font-weight: bold;
-}
 
 /* Search and order by */
 
@@ -162,13 +134,7 @@
 }
 
 @media screen and (max-width:767px){
-    .title-banner-page{
-        font-size: 1rem;
-        margin: 0;
-    }
-    .link-previous-page, .current-page{
-        font-size: .7rem;
-    }
+  
     /* Filter */
     .filter-box-all{
         padding: 0;
@@ -245,12 +211,6 @@
     .order-by{
         width: 100% !important;
     }
-    .title-banner-page{
-        font-size: .8rem;
-        margin: 0;
-    }
-    .link-previous-page, .current-page{
-        font-size: .5rem;
-    }
+    
 }
 
