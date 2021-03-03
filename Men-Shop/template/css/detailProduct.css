@@ -71,7 +71,7 @@
 .btn-add-cart{
     border: none;
     padding: .7rem 2rem;
-    background-color: rgb(255, 73, 73);
+    background-color: red;
     color: #fff;
     margin-top: 1rem;
 }
