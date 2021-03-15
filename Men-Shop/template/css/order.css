@@ -59,12 +59,156 @@
     font-size: 1.1rem;
 }
 
+
+
+.inter-bank-infor{
+    border: 1px solid rgb(162, 162, 162);
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: rgb(248, 248, 248);
+    display: none;
+
+}
+.card-infor{
+    transform-style: preserve-3d;
+    position: relative;
+    background-color: rgb(154, 154, 154);
+    border-radius: 15px;
+    height: 235px;
+    margin: auto;
+    transform: rotateY(0);
+    transition: .7s all;
+    font-family: Consolas, Courier, monospace;
+    
+}
+
+.name-owner{
+    width: 60%;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.mastercard-img{
+    width: 4rem;
+   
+    
+}
+.number-card{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.day{
+    margin-bottom: 0!important;
+    display: flex;
+    justify-content: space-between;
+}
+.day p{
+    
+    margin: 0;
+}
+#time{
+    font-size: 20px;
+}
+.name{
+    padding-top: 1.5rem;
+    font-size: 20px;
+    margin: 0 !important;
+}
+.font-site{
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    padding: 1.5rem 2rem;
+    color: rgb(213, 213, 213);
+
+    
+}
+.back-site{
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 1.2rem 0;
+    transform: rotateY(180deg);
+
+}
+.black-space{
+    height: 40px;
+    width: 100%;
+    background: black;
+}
+.signature{
+    position: relative;
+    background: repeating-linear-gradient(0.1deg, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 40%, rgb(255, 238, 170) 40%, rgb(255, 238, 170) 44%, rgb(255, 255, 255) 44%);
+    height: 2.5rem;
+    width: 75%;
+    margin-left:2rem;
+}
+.private-number{
+    position: absolute;
+    bottom: 5px;
+    right: 16px;
+    margin: 0!important;
+    font-weight: bold;
+    
+}
+.active-rotage{
+    transform: rotateY(180deg);
+    transition: .7s all;
+}
+
+.active-hightlight{
+    color: white;
+    font-weight: bold;
+}
+.group-input{
+    display: flex;
+}
+.group-input span{
+    padding: 0 .5rem;
+}
+.group-input input{
+    width: 4.5rem!important;
+    
+}
+@media screen and (max-width:992px){
+    
+    .infor-bill-area{
+        margin-top: 2.8rem;
+
+    }
+    .card-infor{
+        width: 60%;
+    }
+}
+
 @media screen and (min-width:992px){
     .btn-order{
         max-width: 30%;
     }
-    .infor-bill-area{
-        margin-top: 2.8rem;
+    .card-infor{
+        width: 75%;
+    }
+}
 
+@media screen and (min-width:1198px){
+    .card-infor{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:768px){
+   
+    .card-infor{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:575px){
+    .card-infor{
+        display: none;
     }
 }

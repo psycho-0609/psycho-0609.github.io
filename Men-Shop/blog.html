@@ -25,7 +25,7 @@
 <body>
     <div id="hideContent" class=""></div>
     <section class="navbar-left-box">
-
+        <div id="hideContent" class=""></div>
         <div id="navbar-active" class="navbar-left">
             <div class="visual">
                 <a href="">
@@ -40,32 +40,33 @@
             </div>
             <div class="navbar-left-content">
                 <div class="navbar-left-item">
-                    <span><i class="fas fa-home"></i></span>
-                    <a href="index.html">Trang chủ</a>
+
+                    <a href="index.html" class="active-nav"><span><i class="fas fa-home"></i></span>Trang chủ</a>
                 </div>
                 <div>
                     <div class="navbar-left-item">
-                        <span><i class="fas fa-list"></i></span>
+
                         <a type="button" class="" href="#" id="btnDropdownMenuProduct">
+                            <span><i class="fas fa-list"></i></span>
                             Sản Phẩm
 
                             <span class="btn-dropdown"><i class="fas fa-angle-down"></i></span>
                         </a>
                     </div>
                     <div id="dropdownMenuProduct" class="dropdown-menu-product">
-                        <a href="shirt.hml">Ao</a>
+                        <a href="shirt.html">Ao</a>
                         <a href="pant.html">Quần</a>
                         <a href="shoes.html">Giày</a>
-                        <a href="accessories">Phụ Kiện</a>
+                        <a href="accessories.html">Phụ Kiện</a>
                     </div>
                 </div>
                 <div class="navbar-left-item">
-                    <span><i class="far fa-newspaper"></i></span>
-                    <a href="blog.html">Tin Tức</a>
+
+                    <a href="blog.html"><span><i class="far fa-newspaper"></i></span>Tin Tức</a>
                 </div>
                 <div class="navbar-left-item">
-                    <span><i class="fas fa-map"></i></span>
-                    <a href="contact.html">Liên Hệ</a>
+                   
+                    <a href="contact.html"> <span><i class="fas fa-map"></i></span>Liên Hệ</a>
                 </div>
             </div>
         </div>
@@ -125,7 +126,8 @@
                                     <div class="form-group row my-4">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
-                                            <button type="submit" id="btnSubmitLogin" class="my-2 btn-login btn w-100">Đăng nhập</button>
+                                            <button type="submit" id="btnSubmitLogin"
+                                                class="my-2 btn-login btn w-100">Đăng nhập</button>
                                             <button type="button" class="my-2 btn-login-google btn w-100">Đăng nhập bằng
                                                 Google++</button>
                                             <button type="button" class="my-2 btn-login-facebook btn w-100">Đăng nhập
@@ -142,7 +144,7 @@
                                         <div class="col-sm-9">
                                             <input type="text" required class="form-control" id="inputNameRegis"
                                                 placeholder="Nhập họ tên">
-                                                <span id="errorInputNameRegis" class="error-message"></span>
+                                            <span id="errorInputNameRegis" class="error-message"></span>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -189,32 +191,34 @@
                                         <label for="inputPassword3" class="col-sm-3 col-form-label">Ngày Sinh</label>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectDay">Ngày</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectDay" >
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectDay">
                                                 <option selected value="-1">Ngày</option>
 
                                             </select>
-                                            
+
                                         </div>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectMonth">Tháng</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectMonth" >
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectMonth">
                                                 <option selected value="-1">Tháng</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectYear">Năm</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectYear" >
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectYear">
                                                 <option selected value="-1">Năm</option>
 
                                             </select>
                                         </div>
                                         <div class="col-sm-3"></div>
-                                        <span id="errorSelectDate" class="error-message col-sm-9" style="padding-left:1rem ;"></span>
+                                        <span id="errorSelectDate" class="error-message col-sm-9"
+                                            style="padding-left:1rem ;"></span>
                                     </div>
                                     <div class="form-group row my-4">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
-                                            <button type="submit" id="btnSubmitRegis" class="my-2 btn-login btn w-100">Tạo tài
+                                            <button type="submit" id="btnSubmitRegis"
+                                                class="my-2 btn-login btn w-100">Tạo tài
                                                 khoản</button>
                                         </div>
                                     </div>
@@ -325,7 +329,7 @@
 
                         <div class="card-body blog-content">
                             <img src="img/blog/imgblog2.jpg" alt="...">
-                            <h3 class="card-title"><a href="detailblog.html">Cuối tuần mặc gì đi chơi</a></h3>
+                            <h3 class="card-title"><a href="detailblog.html">Trang phục đi biển cho chàng mùa hè 2021</a></h3>
                             <div class="card-infor-area">
                                 <span><i class="fas fa-calendar-week"></i> 01/01/2021</span>
                                 <span><i class="fas fa-user"></i> Minh Nguyễn </span>|
@@ -343,17 +347,20 @@
                     <div class="card card-blog">
 
                         <div class="card-body blog-content">
-                            <img src="img/blog/imgblog2.jpg" alt="...">
-                            <h3 class="card-title"><a href="detailblog.html">Cuối tuần mặc gì đi chơi</a></h3>
+                            <img src="img/blog/imageblog1.jpg" alt="...">
+                            <h3 class="card-title"><a href="detailblog.html">Gặp gỡ cựu người mẫu thiết kế phụ kiện cấp
+                                    cao cấp tại Paris</a></h3>
                             <div class="card-infor-area">
                                 <span><i class="fas fa-calendar-week"></i> 01/01/2021</span>
                                 <span><i class="fas fa-user"></i> Minh Nguyễn </span>|
                                 <span>2 bình luận</span>
                             </div>
-                            <p class="card-text">Để chống chọi hiệu quả với cái rét ẩm của miền Bắc, bạn nên
-                                diện những chiếc áo dày dặn bên trong như len vặn thừng để giữ ấm tuyệt đối cho
-                                cơ thể. Cũng nên chọn áo trong có gam màu tương phản với áo parka để trang phục
-                                thêm nổi bật hơn trong các mẫu dưới đây của H2T nhé.</p>
+                            <p class="card-text">Với nam giới thường không quan tâm tới số đo hay size áo chuẩn, thông
+                                thường họ theo quan điểm thử đồ nào vừa thì sẽ chọn size đấy. Tuy nhiên, để sở hữu những
+                                bộ trang phục chuẩn form thì những thông số sau đây sẽ giúp cánh mày râu có thể chọn
+                                được những chiếc áo vừa in và hơn nữa sẽ không bị lung túng khi mua hàng online.
+
+                               </p>
                             <a href="detailblog.html" class="btn-blog-viewdetail">Chi tiết >></a>
                         </div>
 
@@ -361,8 +368,8 @@
                     <div class="card card-blog">
 
                         <div class="card-body blog-content">
-                            <img src="img/blog/imgblog2.jpg" alt="...">
-                            <h3 class="card-title"><a href="detailblog.html">Cuối tuần mặc gì đi chơi</a></h3>
+                            <img src="img/blog/imgblog5.jpg" alt="...">
+                            <h3 class="card-title"><a href="detailblog.html">Nhịp đập thời trang trên con đường</a></h3>
                             <div class="card-infor-area">
                                 <span><i class="fas fa-calendar-week"></i> 01/01/2021</span>
                                 <span><i class="fas fa-user"></i> Minh Nguyễn </span>|
@@ -377,7 +384,7 @@
 
                     </div>
                     <div class="pagination-box">
-                        <nav aria-label="Page navigation example" >
+                        <nav aria-label="Page navigation example">
                             <ul class="pagination">
                                 <li class="page-item">
                                     <a class="page-link" href="detailblog.html" aria-label="Previous">
@@ -403,7 +410,8 @@
                         <form action="">
                             <div class="form-group blog-form-search">
                                 <input type="text" placeholder="Tìm kiếm bài viết" class="form-control">
-                                <button type="submit" class="btn-submit-search"><span><i class="fas fa-search"></i></span></button>
+                                <button type="submit" class="btn-submit-search"><span><i
+                                            class="fas fa-search"></i></span></button>
                             </div>
                         </form>
 
@@ -425,31 +433,31 @@
                                 </div>
                                 <div class="post-content">
                                     <h5><a href="">Cách chọn áo sơ mi cho phù hợp</a></h5>
-                                    <div class="post-time"><span><i class="fas fa-calendar-alt"></i></span> 01/01/2021
+                                    <div class="post-time"><span><i class="fas fa-calendar-alt"></i></span> 25/02/2021
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div class="post-popular-card">
                                 <div class="post-img">
-                                    <img src="img/blog/imgblog3.jpg" alt="">
+                                    <img src="img/blog/kaki.jpg" alt="">
                                 </div>
                                 <div class="post-content">
-                                    <h5><a href="">Cách chọn áo sơ mi cho phù hợp</a></h5>
-                                    <div class="post-time"><span><i class="fas fa-calendar-alt"></i></span> 01/01/2021
+                                    <h5><a href="">Đôi điều về Quần Kaki</a></h5>
+                                    <div class="post-time"><span><i class="fas fa-calendar-alt"></i></span> 28/01/2021
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div class="post-popular-card">
                                 <div class="post-img">
-                                    <img src="img/blog/imgblog3.jpg" alt="">
+                                    <img src="img/blog/short_2.jpg" alt="">
                                 </div>
                                 <div class="post-content">
-                                    <h5><a href="">Cách chọn áo sơ mi cho phù hợp</a></h5>
+                                    <h5><a href="">Bí quyết lựa chọn short kaki nam</a></h5>
                                     <div class="post-time"><span><i class="fas fa-calendar-alt"></i></span> 01/01/2021
                                     </div>
-                                    
+
                                 </div>
                             </div>
 
@@ -466,7 +474,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </main>

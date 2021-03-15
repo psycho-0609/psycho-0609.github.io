@@ -24,7 +24,7 @@
 <body>
     <div id="hideContent" class=""></div>
     <section class="navbar-left-box">
-
+        <div id="hideContent" class=""></div>
         <div id="navbar-active" class="navbar-left">
             <div class="visual">
                 <a href="">
@@ -39,13 +39,14 @@
             </div>
             <div class="navbar-left-content">
                 <div class="navbar-left-item">
-                    <span><i class="fas fa-home"></i></span>
-                    <a href="index.html">Trang chủ</a>
+                    
+                    <a href="index.html" class="active-nav"><span><i class="fas fa-home"></i></span>Trang chủ</a>
                 </div>
                 <div>
                     <div class="navbar-left-item">
-                        <span><i class="fas fa-list"></i></span>
+                        
                         <a type="button" class="" href="#" id="btnDropdownMenuProduct">
+                            <span><i class="fas fa-list"></i></span>
                             Sản Phẩm
 
                             <span class="btn-dropdown"><i class="fas fa-angle-down"></i></span>
@@ -54,13 +55,13 @@
                     <div id="dropdownMenuProduct" class="dropdown-menu-product">
                         <a href="shirt.html">Ao</a>
                         <a href="pant.html">Quần</a>
-                        <a href="shirt.html">Giày</a>
+                        <a href="shoes.html">Giày</a>
                         <a href="accessories.html">Phụ Kiện</a>
                     </div>
                 </div>
                 <div class="navbar-left-item">
-                    <span><i class="far fa-newspaper"></i></span>
-                    <a href="blog.html">Tin Tức</a>
+                    
+                    <a href="blog.html"><span><i class="far fa-newspaper"></i></span>Tin Tức</a>
                 </div>
                 <div class="navbar-left-item">
                     <span><i class="fas fa-map"></i></span>
@@ -259,7 +260,7 @@
                 <div class="header-nav-card">
                     <button class="btn-search" id="btnSearchNav" type="button" style="outline: none"><span><i
                                 class="fa fa-search" aria-hidden="true"></i></span></button>
-                    <a href=""><span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
+                    <a href="cart.html"><span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
 
                 </div>
                 <div class="nav-search-box" id="navSearchBox">
@@ -281,11 +282,11 @@
                                 <a class="dropdown-item" href="accessories.html">Phu Kien</a>
                             </div>
                         </div>
-                        <div class="nav-item active-nav"><a href="blog.html" class="">Tin Tức</a>
+                        <div class="nav-item"><a href="blog.html" class="">Tin Tức</a>
 
                         </div>
 
-                        <div class="nav-item"><a href="">Liên Hệ</a></div>
+                        <div class="nav-item"><a href="contact.html">Liên Hệ</a></div>
                     </div>
                     <ul class="navbar-nav navbar-icon ml-auto">
                         <li class="nav-item">
@@ -323,23 +324,23 @@
                     <div class="product-list">
                         <div class="card-product-item">
                             <div class="product-img">
-                                <img src="img/Shoes/img1.png" alt="">
+                                <img src="img/Shoes/biti2.jpg" alt="">
                             </div>
                             <div class="cart-product-content">
                                 <div class="infor-product-area">
-                                    <p class="name-product">Nike Air Zoom Pegasus 37</p>
+                                    <p class="name-product">Giày Thể Thao </p>
                                     <p>Màu Sắc: Đen</p>
                                     <p>Kích Cỡ: 39</p>
 
                                     <a href="" class="btn-delete btn-delete-md">Xóa</a>
                                 </div>
                                 <div class="product-price">
-                                    <span>500.000 ₫</span>
+                                    <span>790.000</span>₫
                                 </div>
                                 <div class="product-quantity quantity-md">
-                                    <button>-</button>
-                                    <input type="text" value="1">
-                                    <button>+</button>
+                                    <button class="btn-minus">-</button>
+                                    <input class="inputQuanlity" type="text" value="1">
+                                    <button class="btn-plus">+</button>
                                 </div>
                                 <div class="w-100 btn-delete btn-delete-sm"><a href="">Xóa</a></div>
                             </div>
@@ -347,23 +348,23 @@
                         </div>
                         <div class="card-product-item">
                             <div class="product-img">
-                                <img src="img/Shoes/img1.png" alt="">
+                                <img src="img/shirt/owen-somi2.jpg" alt="">
                             </div>
                             <div class="cart-product-content">
                                 <div class="infor-product-area">
-                                    <p class="name-product">Nike Air Zoom Pegasus 37</p>
+                                    <p class="name-product">Áo Sơ Mi Owe</p>
                                     <p>Màu Sắc: Đen</p>
-                                    <p>Kích Cỡ: 39</p>
+                                    <p>Kích Cỡ: M</p>
                                     
                                     <a href="" class="btn-delete btn-delete-md">Xóa</a>
                                 </div>
                                 <div class="product-price">
-                                    <span>500.000 ₫</span>
+                                    <span>500.000 </span>₫
                                 </div>
                                 <div class="product-quantity quantity-md">
-                                    <button>-</button>
-                                    <input type="text" value="1">
-                                    <button>+</button>
+                                    <button class="btn-minus">-</button>
+                                    <input class="inputQuanlity" type="text" value="1">
+                                    <button class="btn-plus">+</button>
                                 </div>
                                 <div class="w-100 btn-delete btn-delete-sm"><a href="">Xóa</a></div>
                             </div>
@@ -371,22 +372,22 @@
                         </div>
                         <div class="card-product-item">
                             <div class="product-img">
-                                <img src="img/Shoes/img1.png" alt="">
+                                <img src="img/phukien/adi1.jpg" alt="">
                             </div>
                             <div class="cart-product-content">
                                 <div class="infor-product-area">
-                                    <p class="name-product">Nike Air Zoom Pegasus 37</p>
-                                    <p>Màu Sắc: Đen</p>
-                                    <p>Kích Cỡ: 39</p>
+                                    <p class="name-product">Gang Tay Gôn</p>
+                                    <p>Màu Sắc: Trắng</p>
+                                    
                                     <a href="" class="btn-delete btn-delete-md">Xóa</a>
                                 </div>
                                 <div class="product-price">
-                                    <span>500.000 ₫</span>
+                                    <span>500.000</span>₫
                                 </div>
                                 <div class="product-quantity ">
-                                    <button>-</button>
-                                    <input type="text" value="1">
-                                    <button>+</button>
+                                    <button class="btn-minus">-</button>
+                                    <input class="inputQuanlity" type="text" value="1" min="1">
+                                    <button class="btn-plus">+</button>
                                 </div>
                                 <div class="w-100 btn-delete btn-delete-sm"><a href="">Xóa</a></div>
                             </div>
@@ -523,6 +524,7 @@
     <script src="template/js/jquery-3.5.1.js"></script>
     <script src="template/js/footer.js"></script>
     <script src="template/js/header.js"></script>
+    <script src="template/js/cart.js"></script>
     <script src="lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>

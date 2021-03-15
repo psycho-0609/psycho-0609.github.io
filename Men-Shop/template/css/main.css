@@ -238,15 +238,21 @@ a:hover{
     .products .item{
         width: 50%;
     }
+    .banner-current-page img{
+        height: 6rem;
+    }
 }
 
 @media screen and (max-width:478px){
+    .banner-current-page img{
+        height: 5rem;
+    }
     .title-banner-page{
-        font-size: .8rem;
+        font-size: 1.2rem;
         margin: 0;
     }
     .link-previous-page, .current-page{
-        font-size: .5rem;
+        font-size: .7rem;
     }
 }
 img{

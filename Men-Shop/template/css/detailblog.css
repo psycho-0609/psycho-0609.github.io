@@ -89,3 +89,13 @@ img{
     color: #fff;
     padding: .6rem;
 }
+
+.box-input-comment .btn-post{
+    text-align: right;
+    margin-top: 1rem;
+   
+
+}
+.box-input-comment .btn-post button{
+    font-weight: bold;
+}

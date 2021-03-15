@@ -42,13 +42,14 @@
             </div>
             <div class="navbar-left-content">
                 <div class="navbar-left-item">
-                    <span><i class="fas fa-home"></i></span>
-                    <a href="index.html" class="active-nav">Trang chủ</a>
+
+                    <a href="index.html" class="active-nav"><span><i class="fas fa-home"></i></span>Trang chủ</a>
                 </div>
                 <div>
                     <div class="navbar-left-item">
-                        <span><i class="fas fa-list"></i></span>
+
                         <a type="button" class="" href="#" id="btnDropdownMenuProduct">
+                            <span><i class="fas fa-list"></i></span>
                             Sản Phẩm
 
                             <span class="btn-dropdown"><i class="fas fa-angle-down"></i></span>
@@ -62,12 +63,12 @@
                     </div>
                 </div>
                 <div class="navbar-left-item">
-                    <span><i class="far fa-newspaper"></i></span>
-                    <a href="blog.html">Tin Tức</a>
+
+                    <a href="blog.html"><span><i class="far fa-newspaper"></i></span>Tin Tức</a>
                 </div>
                 <div class="navbar-left-item">
-                    <span><i class="fas fa-map"></i></span>
-                    <a href="contact.html">Liên Hệ</a>
+                    
+                    <a href="contact.html"><span><i class="fas fa-map"></i></span>Liên Hệ</a>
                 </div>
             </div>
         </div>
@@ -120,6 +121,8 @@
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-3 col-form-label"></label>
                                         <div class="col-sm-9">
+                                            <button type="submit" id="btnSubmitLogin"
+                                                class="my-2 btn-login btn w-100">Đăng nhập</button>
                                             <div>Quên mật khẩu? Nhấn tại <a href="#"> đây</a></div>
                                         </div>
 
@@ -127,7 +130,7 @@
                                     <div class="form-group row my-4">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
-                                            <button type="submit" id="btnSubmitLogin" class="my-2 btn-login btn w-100">Đăng nhập</button>
+
                                             <button type="button" class="my-2 btn-login-google btn w-100">Đăng nhập bằng
                                                 Google++</button>
                                             <button type="button" class="my-2 btn-login-facebook btn w-100">Đăng nhập
@@ -144,7 +147,7 @@
                                         <div class="col-sm-9">
                                             <input type="text" required class="form-control" id="inputNameRegis"
                                                 placeholder="Nhập họ tên">
-                                                <span id="errorInputNameRegis" class="error-message"></span>
+                                            <span id="errorInputNameRegis" class="error-message"></span>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -191,32 +194,34 @@
                                         <label for="inputPassword3" class="col-sm-3 col-form-label">Ngày Sinh</label>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectDay">Ngày</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectDay" >
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectDay">
                                                 <option selected value="-1">Ngày</option>
 
                                             </select>
-                                            
+
                                         </div>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectMonth">Tháng</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectMonth" >
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectMonth">
                                                 <option selected value="-1">Tháng</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectYear">Năm</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectYear" >
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectYear">
                                                 <option selected value="-1">Năm</option>
 
                                             </select>
                                         </div>
                                         <div class="col-sm-3"></div>
-                                        <span id="errorSelectDate" class="error-message col-sm-9" style="padding-left:1rem ;"></span>
+                                        <span id="errorSelectDate" class="error-message col-sm-9"
+                                            style="padding-left:1rem ;"></span>
                                     </div>
                                     <div class="form-group row my-4">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
-                                            <button type="submit" id="btnSubmitRegis" class="my-2 btn-login btn w-100">Tạo tài
+                                            <button type="submit" id="btnSubmitRegis"
+                                                class="my-2 btn-login btn w-100">Tạo tài
                                                 khoản</button>
                                         </div>
                                     </div>
@@ -329,7 +334,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/banner/02.jpg" class="d-block w-100 banner-img" alt="...">
+                    <img src="img/banner/banner3.jpg" class="d-block w-100 banner-img" alt="...">
                     <div class="slide-content-box">
                         <h1 class="slide-title">FASHION FOR MEN</h1>
                         <p>được viết dưới dạng font đơn cách. Hầu hết các font chữ đều được biết như là các font rộng
@@ -367,21 +372,27 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 item-cate">
                     <div class="about-picture">
                         <a href="shirt.html"><img class="img-cate" src="img/category/1.png" alt=""></a>
-                        <a href="shirt.html"><div class="picture-title">Áo</div></a>
+                        <a href="shirt.html">
+                            <div class="picture-title">Áo</div>
+                        </a>
                     </div>
 
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 item-cate">
                     <div class="about-picture">
                         <a href="pant.html"><img class="img-cate" src="img/category/image2.png" alt=""></a>
-                        <a href="pant.html"><div class="picture-title">Quần</div></a>
+                        <a href="pant.html">
+                            <div class="picture-title">Quần</div>
+                        </a>
                     </div>
 
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 item-cate">
                     <div class="about-picture">
                         <a href="shoes.html"><img class="img-cate" src="img/category/img3.png" alt=""></a>
-                        <a href="shoes.html"><div class="picture-title">Giày</div></a>
+                        <a href="shoes.html">
+                            <div class="picture-title">Giày</div>
+                        </a>
 
                     </div>
 
@@ -389,7 +400,9 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 item-cate">
                     <div class="about-picture">
                         <a href="accessories.html"><img class="img-cate" src="img/category/img4.png" alt=""></a>
-                        <a href="accessories.html"><div class="picture-title">Phụ Kiện</div></a>
+                        <a href="accessories.html">
+                            <div class="picture-title">Phụ Kiện</div>
+                        </a>
                     </div>
 
                 </div>
@@ -563,7 +576,7 @@
                         </div>
 
                     </div>
-                  
+
                     <div class="item product-item" itemscope itemtype="abc">
 
                         <div class="card" style="">
@@ -829,9 +842,9 @@
                                         <span><i class="fas fa-calendar-day"></i> 21/01/2021</span>
                                         <span><i class="fas fa-user"></i> Minh Nguyễn</span> |
                                         <span>2 bình luận</span>
-                                        <p class="content-card">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        <p class="content-card">Nếu như quần jeans thường hợp hơn với giới trẻ, quần vải
+                                            âu phù hợp với không gian nghiêm túc, chốn công sở thì quần kaki lại là
+                                            chiếc quần đa...
                                         </p>
                                         <a href="" class="btn-blog-detail">Chi tiết >></a>
                                     </div>
@@ -845,14 +858,13 @@
                             <div class="card" style="">
                                 <img src="img/New folder/new2.png" class="card-img-top" alt="...">
                                 <div class="card-body card-news">
-                                    <h5 class="card-title">Hướng dẫn phối đồ</h5>
+                                    <h5 class="card-title">Hướng dẫn chọn size quần áo</h5>
                                     <div class="infor-news">
                                         <span><i class="fas fa-calendar-day"></i> 21/01/2021</span>
                                         <span><i class="fas fa-user"></i> Minh Nguyễn</span> |
                                         <span>2 bình luận</span>
-                                        <p class="content-card">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        <p class="content-card">Trang phục sẽ tôn lên vóc dáng con người, vì vậy, quan
+                                            trọng hơn cả là bạn phải chọn được trang phục phù hợp với form người mình..
                                         </p>
                                         <a href="" class="btn-blog-detail">Chi tiết >></a>
                                     </div>
@@ -866,14 +878,14 @@
                             <div class="card" style="">
                                 <img src="img/New folder/new3.png" class="card-img-top" alt="...">
                                 <div class="card-body card-news">
-                                    <h5 class="card-title">Hướng dẫn phối đồ</h5>
+                                    <h5 class="card-title">Cách chọn áo sơ mi</h5>
                                     <div class="infor-news">
                                         <span><i class="fas fa-calendar-day"></i> 21/01/2021</span>
                                         <span><i class="fas fa-user"></i> Minh Nguyễn</span> |
                                         <span>2 bình luận</span>
-                                        <p class="content-card">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        <p class="content-card">Với kiểu dáng rộng rãi và đặc biệt ít nhăn, một chiếc
+                                            quần dáng suông đem đến ấn tượng phóng khoáng, khỏe mạnh và thậm chí hơi bụi
+                                            bặm với vài sợi vải tước ở phần gấu...
                                         </p>
                                         <a href="" class="btn-blog-detail">Chi tiết >></a>
                                     </div>
@@ -994,32 +1006,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
-        $('#owlCarouselProduct').owlCarousel({
-            autoplay: true,
-            autoplayTimeout: 2000,
-            loop: true,
-            margin: 10,
-            nav: false,
-            dots: false,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                480: {
-                    items: 2
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 4
-                }
-            }
-        })
+
         $(document).ready(function () {
-
-
-
+            $('#owlCarouselProduct').owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 2000,
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    480: {
+                        items: 2
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            })
+            $('.carousel-inner').carousel({
+                touch: true
+            })
 
         })
     </script>

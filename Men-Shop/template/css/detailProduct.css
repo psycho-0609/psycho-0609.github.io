@@ -85,4 +85,9 @@
     font-family: 'Playfair Display', serif;
     margin-bottom: .5rem;
 }
+.img-product{
+    transform: translateZ(0);
+    transition: 1s all;
+}
+
 

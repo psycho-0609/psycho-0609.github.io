@@ -24,7 +24,7 @@
 <body>
     <div id="hideContent" class=""></div>
     <section class="navbar-left-box">
-
+        <div id="hideContent" class=""></div>
         <div id="navbar-active" class="navbar-left">
             <div class="visual">
                 <a href="">
@@ -39,13 +39,14 @@
             </div>
             <div class="navbar-left-content">
                 <div class="navbar-left-item">
-                    <span><i class="fas fa-home"></i></span>
-                    <a href="">Trang chủ</a>
+
+                    <a href="index.html" class="active-nav"><span><i class="fas fa-home"></i></span>Trang chủ</a>
                 </div>
                 <div>
                     <div class="navbar-left-item">
-                        <span><i class="fas fa-list"></i></span>
+
                         <a type="button" class="" href="#" id="btnDropdownMenuProduct">
+                            <span><i class="fas fa-list"></i></span>
                             Sản Phẩm
 
                             <span class="btn-dropdown"><i class="fas fa-angle-down"></i></span>
@@ -59,8 +60,8 @@
                     </div>
                 </div>
                 <div class="navbar-left-item">
-                    <span><i class="far fa-newspaper"></i></span>
-                    <a href="blog.html">Tin Tức</a>
+
+                    <a href="blog.html"><span><i class="far fa-newspaper"></i></span>Tin Tức</a>
                 </div>
                 <div class="navbar-left-item">
                     <span><i class="fas fa-map"></i></span>
@@ -124,7 +125,8 @@
                                     <div class="form-group row my-4">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
-                                            <button type="submit" id="btnSubmitLogin" class="my-2 btn-login btn w-100">Đăng nhập</button>
+                                            <button type="submit" id="btnSubmitLogin"
+                                                class="my-2 btn-login btn w-100">Đăng nhập</button>
                                             <button type="button" class="my-2 btn-login-google btn w-100">Đăng nhập bằng
                                                 Google++</button>
                                             <button type="button" class="my-2 btn-login-facebook btn w-100">Đăng nhập
@@ -141,7 +143,7 @@
                                         <div class="col-sm-9">
                                             <input type="text" required class="form-control" id="inputNameRegis"
                                                 placeholder="Nhập họ tên">
-                                                <span id="errorInputNameRegis" class="error-message"></span>
+                                            <span id="errorInputNameRegis" class="error-message"></span>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -188,32 +190,34 @@
                                         <label for="inputPassword3" class="col-sm-3 col-form-label">Ngày Sinh</label>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectDay">Ngày</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectDay" >
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectDay">
                                                 <option selected value="-1">Ngày</option>
 
                                             </select>
-                                            
+
                                         </div>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectMonth">Tháng</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectMonth" >
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectMonth">
                                                 <option selected value="-1">Tháng</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-3 my-1">
                                             <label class="mr-sm-2 sr-only" for="formSigninSlectYear">Năm</label>
-                                            <select class="custom-select mr-sm-2" id="formSigninSlectYear" >
+                                            <select class="custom-select mr-sm-2" id="formSigninSlectYear">
                                                 <option selected value="-1">Năm</option>
 
                                             </select>
                                         </div>
                                         <div class="col-sm-3"></div>
-                                        <span id="errorSelectDate" class="error-message col-sm-9" style="padding-left:1rem ;"></span>
+                                        <span id="errorSelectDate" class="error-message col-sm-9"
+                                            style="padding-left:1rem ;"></span>
                                     </div>
                                     <div class="form-group row my-4">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
-                                            <button type="submit" id="btnSubmitRegis" class="my-2 btn-login btn w-100">Tạo tài
+                                            <button type="submit" id="btnSubmitRegis"
+                                                class="my-2 btn-login btn w-100">Tạo tài
                                                 khoản</button>
                                         </div>
                                     </div>
@@ -319,9 +323,11 @@
                     </div>
                 </div>
             </div>
+            <h2 class="order-title">1. ĐỊA CHỈ THANH TOÁN</h2>
             <div class="row">
+
                 <div class=" col-lg-7 col-md-12">
-                    <h2 class="order-title">1. ĐỊA CHỈ THANH TOÁN</h2>
+
                     <div class="infor-order-area">
 
 
@@ -376,28 +382,96 @@
                     <div class="infor-order-area select-option-pay">
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                value="option1" checked>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="cash" value="option1"
+                                checked>
                             <label class="form-check-label" for="exampleRadios1">
                                 Thanh toán tiền mặt khi nhận hàng
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="interBank"
                                 value="option2">
                             <label class="form-check-label" for="exampleRadios2">
-                                Thẻ ATM nội địa/ Internet Banking
+                                Internet Banking
                             </label>
                         </div>
+                        <div class="inter-bank-infor" id="interBankInfor">
+                            <p><b>Chủ tài Khoản: Lưu Ngọc Hưng</b></p>
+                            <p><b>Số tài Khoản: 0451000454383</b></p>
+                            <p><b>Ngân hàng Vietcombank chi nhánh Thành Công</b></p>
+                            <p>Nội dung: Thanh toán hóa đơn mua hàng [ họ tên ] -- [ SĐT ]</p>
+                        </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                value="option2">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="visa" value="option2">
                             <label class="form-check-label" for="exampleRadios2">
                                 Thanh toán bằng thẻ quốc tế VISA, MASTER
                             </label>
                         </div>
+                        <div class="inter-bank-infor" id="visaCardBox">
+                            <div class="card-infor" id="cardVisaInfor">
+                                <div class="font-site" id="fontSite">
+                                    <div class="mastercard-img"><img src="img/card.jpg" alt=""> </div>
+                                    <div class="number-card">
+                                        <p id="detailNumber">•••• •••• •••• ••••</p>
+                                    </div>
+                                    <div class="day">
+
+                                        <div class="name-owner name" id="owerName">Tên Chủ Thẻ</div>
+                                        <div class="date-card">
+                                            <p>Hiệu lực đến</p>
+                                            <p id="time"><span id="day">••</span>/<span id="month">••</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="back-site active-display" id="backSite">
+                                    <div class="black-space"></div>
+                                    <div class="signature">
+                                        <div class="private-number" id="privateNumber"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="numberCard" class="">Số Thẻ:</label>
+                                        <input autocomplete="off" type="number" id="numberCard" class="form-control"
+                                            maxlength="16" placeholder="VD: 0451000454383">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" class="col-form-label">Tên in trên thẻ:</label>
+                                        <input type="text" class="form-control" id="name"
+                                            style="text-transform: uppercase;" autocomplete="off"
+                                            placeholder="VD: NGUYEN VAN A">
+                                    </div>
+                                    <div class="">
+                                        <label for="">Ngày hết hạn</label>
+                                        <div class="group-input">
+                                            <input type="text" id="inputDay" class="form-control" placeholder="Ngày"
+                                                autocomplete="off">
+                                            <span>/</span>
+                                            <input type="text" id="inputMonth" class="form-control" placeholder="Tháng"
+                                                autocomplete="off">
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" class="col-form-label">Mã Bảo Mật:</label>
+                                        <input type="text" id="inputPrivateNumber" class="form-control"
+                                            style="width:5rem" placeholder="VD:123" autocomplete="off">
+                                    </div>
+                                    <div class="text-center">
+
+                                        <button class="btn btn-primary">Xác Nhận</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
 
                     </div>
+
+
                 </div>
                 <div class="col-lg-5 col-md-12">
                     <div class="infor-bill-area">
@@ -433,13 +507,16 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
             <div class="btn-order">
                 <a href="">Đặt Mua</a>
             </div>
-
-
         </div>
+        
+
+
+        
     </main>
     <footer>
         <div class="container">
@@ -540,6 +617,7 @@
     <script src="template/js/jquery-3.5.1.js"></script>
     <script src="template/js/footer.js"></script>
     <script src="template/js/header.js"></script>
+    <script src="template/js/oder.js"></script>
     <script src="lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>

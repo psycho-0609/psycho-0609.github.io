@@ -25,7 +25,7 @@
 <body>
     <div id="hideContent" class=""></div>
     <section class="navbar-left-box">
-
+        <div id="hideContent" class=""></div>
         <div id="navbar-active" class="navbar-left">
             <div class="visual">
                 <a href="">
@@ -40,32 +40,33 @@
             </div>
             <div class="navbar-left-content">
                 <div class="navbar-left-item">
-                    <span><i class="fas fa-home"></i></span>
-                    <a href="">Trang chủ</a>
+                    
+                    <a href="index.html" class="active-nav"><span><i class="fas fa-home"></i></span>Trang chủ</a>
                 </div>
                 <div>
                     <div class="navbar-left-item">
-                        <span><i class="fas fa-list"></i></span>
+                        
                         <a type="button" class="" href="#" id="btnDropdownMenuProduct">
+                            <span><i class="fas fa-list"></i></span>
                             Sản Phẩm
 
                             <span class="btn-dropdown"><i class="fas fa-angle-down"></i></span>
                         </a>
                     </div>
                     <div id="dropdownMenuProduct" class="dropdown-menu-product">
-                        <a href="">Ao</a>
-                        <a href="">Quần</a>
-                        <a href="">Giày</a>
-                        <a href="">Phụ Kiện</a>
+                        <a href="shirt.html">Ao</a>
+                        <a href="pant.html">Quần</a>
+                        <a href="shoes.html">Giày</a>
+                        <a href="accessories.html">Phụ Kiện</a>
                     </div>
                 </div>
                 <div class="navbar-left-item">
-                    <span><i class="far fa-newspaper"></i></span>
-                    <a href="">Tin Tức</a>
+                    
+                    <a href="blog.html"><span><i class="far fa-newspaper"></i></span>Tin Tức</a>
                 </div>
                 <div class="navbar-left-item">
                     <span><i class="fas fa-map"></i></span>
-                    <a href="">Liên Hệ</a>
+                    <a href="contact.html">Liên Hệ</a>
                 </div>
             </div>
         </div>
@@ -448,19 +449,19 @@
                         </div>
                         <h3 class="heading-blog heading-comment">Để Lại Bình Luận</h3>
                         <form action="">
-                            <div class="row">
-                                <div class="col form-group">
-                                    <input type="text" class="form-control" placeholder="Tên bạn">
+                            
+                                <div class="user-comment comment-box" style="border: none;">
+                                    <div class="img-of-user">
+                                        <img src="img/imgOfUser/EC0nvJEUwAEQOnZ.jpg" alt="">
+                                    </div>
+                                    <div class="content-comment box-input-comment">
+                                        
+                                       <textarea name="" id="" cols="30" rows="3" class="form-control input-comment" placeholder="Nội Dung Bình Luận"></textarea>
+                                       <div class="btn-post"><button class="btn btn-primary">Đăng</button></div>
+                                    </div>
+                                    
                                 </div>
-                                <div class="col form-group">
-                                    <input type="text" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <textarea name="" id="" cols="30" rows="10" class="form-control"
-                                    placeholder="Bình luận của bạn"></textarea>
-                            </div>
-                            <button class="btn-submit-comment">Gửi Bình Luận</button>
+                                
                         </form>
                     </div>
 
@@ -501,10 +502,10 @@
                             </div>
                             <div class="post-popular-card">
                                 <div class="post-img">
-                                    <img src="img/blog/imgblog3.jpg" alt="">
+                                    <img src="img/blog/kaki.jpg" alt="">
                                 </div>
                                 <div class="post-content">
-                                    <h5><a href="">Cách chọn áo sơ mi cho phù hợp</a></h5>
+                                    <h5><a href="">Đôi điều về Quần Kaki</a></h5>
                                     <div class="post-time"><span><i class="fas fa-calendar-alt"></i></span> 01/01/2021
                                     </div>
 
@@ -512,10 +513,10 @@
                             </div>
                             <div class="post-popular-card">
                                 <div class="post-img">
-                                    <img src="img/blog/imgblog3.jpg" alt="">
+                                    <img src="img/blog/short_2.jpg" alt="">
                                 </div>
                                 <div class="post-content">
-                                    <h5><a href="">Cách chọn áo sơ mi cho phù hợp</a></h5>
+                                    <h5><a href="">Bí quyết lựa chọn short kaki nam</a></h5>
                                     <div class="post-time"><span><i class="fas fa-calendar-alt"></i></span> 01/01/2021
                                     </div>
 
@@ -525,7 +526,7 @@
                         </div>
 
                         <div class="post-tag">
-                            <h3 class="title-blog">Tag</h3>
+                            <h3 class="heading-blog">Tag</h3>
                             <div class="tag-box">
                                 <a href="" class="tag-item">Thời Thượng</a>
                                 <a href="" class="tag-item">Phối Đồ</a>
