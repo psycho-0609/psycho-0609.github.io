@@ -99,14 +99,14 @@ a:hover{
     background-color: #F39C12;
     color: #fff;
     padding: 0.5rem 2rem;
+    box-shadow: inset 0 0 0 0 #474640;
+    transition: ease-out .5s;
+    outline: none;
 
 }
 .btn-viewmore:hover{
-    background-color: #F39C12;
-    color: #fff;
-    transform: rotateY(360deg);
-    transition: 1s all;
-    /* transform: rotateY(0); */
+    box-shadow: inset 300px 0 0 0 #474640;
+    color: white;
 }
 .card-news{
     text-align: start;

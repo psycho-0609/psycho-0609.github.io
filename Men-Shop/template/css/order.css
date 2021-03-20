@@ -172,8 +172,56 @@
 }
 .group-input input{
     width: 4.5rem!important;
+}
+.success-icon{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+.success-icon i{
+    font-size: 4rem;
+    color: rgb(9, 175, 9);
+}
+.text-sucess{
+    font-weight: bold;
+    text-align: center;
+}
+.check-out,.total-order{
+    display: flex;
+    justify-content: space-between;
+    padding: .3rem 0;
+}
+.total-order span{
+    width: 50%;
+}
+.total-order {
+    font-size: 1.3rem;
+    color: red;
+}
+.check-out span{
+    width: 50%;
+}
+.check-out span:first-child{
+    font-weight: bold;
+    
     
 }
+.text-order{
+    margin: 0;
+    font-weight: bold;
+    margin-top: .6rem;
+}
+ .check-out .name-product{
+    font-weight: inherit!important;
+}
+.btn-return{
+    padding-top: 1rem   ;
+    text-align: center;
+}
+.modal-checkout{
+   max-width: 430px;
+   /* margin: auto; */
+}
+
 @media screen and (max-width:992px){
     
     .infor-bill-area{

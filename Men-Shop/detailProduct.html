@@ -40,12 +40,12 @@
             </div>
             <div class="navbar-left-content">
                 <div class="navbar-left-item">
-                    
+
                     <a href="index.html" class="active-nav"><span><i class="fas fa-home"></i></span>Trang chủ</a>
                 </div>
                 <div>
                     <div class="navbar-left-item">
-                        
+
                         <a type="button" class="" href="#" id="btnDropdownMenuProduct">
                             <span><i class="fas fa-list"></i></span>
                             Sản Phẩm
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="navbar-left-item">
-                    
+
                     <a href="blog.html"><span><i class="far fa-newspaper"></i></span>Tin Tức</a>
                 </div>
                 <div class="navbar-left-item">
@@ -102,32 +102,36 @@
                                     <div class="form-group row">
                                         <label for="inputEmail3" class="col-sm-3 col-form-label">Email / SĐT</label>
                                         <div class="col-sm-9">
-                                            <input type="text" required class="form-control" id="inputEmail3"
+                                            <input type="text" class="form-control" id="inputEmailLogin"
                                                 placeholder="Nhập Email hoặc Số điện thoại">
+                                            <span id="errorInputEmailLogin" class="error-message"></span>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-3 col-form-label">Mật Khẩu</label>
                                         <div class="col-sm-9">
-                                            <input type="password" required class="form-control" id="inputPassword3"
+                                            <input type="password" class="form-control" id="inputPasswordLogin"
                                                 placeholder="Mật khẩu từ 9 đến 32 ký tự">
+                                            <span id="errorInputPassLogin" class="error-message"></span>
                                         </div>
                                     </div>
                                     </fieldset>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-3 col-form-label"></label>
                                         <div class="col-sm-9">
-                                            <div>Quên mật khẩu? Nhấn tại <a href=""> đây</a></div>
+                                            <button type="submit" id="btnSubmitLogin"
+                                                class="my-2 btn-login btn w-100">Đăng nhập</button>
+                                            <div>Quên mật khẩu? Nhấn tại <a href="#"> đây</a></div>
                                         </div>
 
                                     </div>
                                     <div class="form-group row my-4">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
-                                            <button type="submit" class="my-2 btn-login btn w-100">Đăng nhập</button>
-                                            <button type="submit" class="my-2 btn-login-google btn w-100">Đăng nhập bằng
+
+                                            <button type="button" class="my-2 btn-login-google btn w-100">Đăng nhập bằng
                                                 Google++</button>
-                                            <button type="submit" class="my-2 btn-login-facebook btn w-100">Đăng nhập
+                                            <button type="button" class="my-2 btn-login-facebook btn w-100">Đăng nhập
                                                 bằng Facebook</button>
                                         </div>
                                     </div>
@@ -292,7 +296,7 @@
                                         aria-hidden="true"></i></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span class=""><i class="fa fa-shopping-cart"
+                            <a class="nav-link" href="cart.html"><span class=""><i class="fa fa-shopping-cart"
                                         aria-hidden="true"></i></span></a>
                         </li>
                     </ul>
@@ -309,32 +313,35 @@
                     <h3 class="title-banner-page">Sản Phẩm</h3>
                     <div class="current-page-box-link">
                         <a href="index.html" class="link-previous-page">Trang chủ ></a>
-                        <a href="shoes.html" class="link-previous-page">Giay ></a>
-                        <span class="current-page"> Nike</span>
+                        <a href="shirt.html" class="link-previous-page">Áo ></a>
+                        <span class="current-page"> Áo Sweatshirt S.W.D</span>
                     </div>
                 </div>
             </div>
             <div class="row detail-product-box box-element">
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="detail-product-img"><img src="img/Shoes/img1.png" class="card-img-top" alt="..." id="mainImage"></div>
+                    <div class="detail-product-img"><img src="img/detailProduct/pl139__2_.jpg" class="card-img-top"
+                            alt="..." id="mainImage"></div>
                     <div class="list-img-product">
-                        <button><img src="img/Shoes/img1.png" alt=""></button>
-                        <button><img src="img/Shoes/img2.png" alt=""></button>
-                        <button><img src="img/Shoes/img1.png" alt=""></button>
-                        <button><img src="img/Shoes/img1.png" alt=""></button>
+                        <button><img src="img/detailProduct/pl139__2_.jpg" alt=""></button>
+                        <button><img src="img/detailProduct/pl139__1_.jpg" alt=""></button>
+                        <button><img src="img/detailProduct/pl139__10_.jpg" alt=""></button>
+                        <button><img src="img/detailProduct/pl139__9_.jpg" alt=""></button>
+                        <button><img src="img/detailProduct/pl139__3_.jpg" alt=""></button>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 detail-product-content">
-                    <h2 class="detail-product-title">Nike Air Zoom Pegasus 37</h2>
-                    <div class="price">500.000 ₫</div>
+                    <h2 class="detail-product-title">Áo Sweatshirt S.W.D</h2>
+                    <div class="price">350.000 ₫</div>
                     <div class="status-product"><span><i class="fas fa-check"></i> Còn hàng</span></div>
                     <form action="">
                         <div class="form-cate">
                             <label for="">Kích Cỡ</label>
                             <select class="custom-select select-size ">
-                                <option value="1">39</option>   
-                                <option value="2">40</option>
-                                <option value="3">41</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                                <option value="3">XL</option>
                             </select>
 
                         </div>
@@ -344,6 +351,7 @@
                                 <option value="1">Đỏ</option>
                                 <option value="2">Trắng</option>
                                 <option value="3">Đen</option>
+                                <option value="3">Hồng</option>
                             </select>
                         </div>
                         <div class="form-cate">
@@ -359,11 +367,10 @@
                     </form>
                     <div class="infor-about-product">
                         <span>Mô Tả</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias sint ex iste quaerat
-                            saepe quis, libero officia maxime, ea incidunt eligendi dolore repellat dolor vero
-                            voluptatum tenetur deleniti molestiae. Provident.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rem odit nostrum,
-                            voluptatibus alias eaque tempora placeat a fuga voluptatem!</p>
+                        <p>Một lựa chọn khá chill và ấm áp đến từ áo thun nỉ dày dặn S.W.D Higher Quality Garment. Chất
+                            liệu vải nỉ da cá mềm mịn, đặc biệt không lo bai rão hay xù lông. Logo thuê nổi tinh tế.
+                            Form slimfit phối bo chun tôn dáng. 8 màu thời thượng, trendy.</p>
+                       
                     </div>
                 </div>
             </div>
@@ -379,7 +386,8 @@
 
                             <div class="card" style="">
                                 <div class="card-img">
-                                    <a href=""><img src="img/Shoes/img1.png" class="card-img-top img-product" alt="..."></a>
+                                    <a href=""><img src="img/shirt/shirt7.jpg" class="card-img-top img-product"
+                                            alt="..."></a>
                                     <div class="add-cart-box">
                                         <a href="">
                                             <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
@@ -391,10 +399,10 @@
                                 <div class="new"><span>New !</span></div>
                                 <div class="card-body">
                                     <a href="">
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
+                                        <h5 class="card-title">Áo Jeans MIIX Collective co</h5>
                                     </a>
-                                    <p class="card-text-sale"><strike>500.000 ₫</strike></p>
-                                    <p class="card-text">300.000 ₫</p>
+                                    <p class="card-text-sale"><strike>700.000 ₫</strike></p>
+                                    <p class="card-text">350.000 ₫</p>
                                 </div>
                             </div>
 
@@ -406,7 +414,7 @@
 
                             <div class="card" style="">
                                 <div class="card-img">
-                                    <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
+                                    <a href=""><img src="img/shirt/shirt15.jpg" class="card-img-top" alt="..."></a>
                                     <div class="add-cart-box">
                                         <a href="">
                                             <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
@@ -416,31 +424,7 @@
                                 </div>
                                 <div class="card-body">
                                     <a href="">
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
-                                    </a>
-                                    <p class="card-text">500.000 ₫</p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 item">
-                        <div class="product-item">
-
-                            <div class="card" style="">
-                                <div class="card-img">
-                                    <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
-                                    <div class="add-cart-box">
-                                        <a href="">
-                                            <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                            THÊM VÀO GIỎ HÀNG
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <a href="">
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
+                                        <h5 class="card-title">Áo polo Dry</h5>
                                     </a>
                                     <p class="card-text">500.000 ₫</p>
 
@@ -454,7 +438,7 @@
 
                             <div class="card" style="">
                                 <div class="card-img">
-                                    <a href=""><img src="img/Shoes/img1.png" class="card-img-top" alt="..."></a>
+                                    <a href=""><img src="img/shirt/shirt6.jpg" class="card-img-top" alt="..."></a>
                                     <div class="add-cart-box">
                                         <a href="">
                                             <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
@@ -464,7 +448,31 @@
                                 </div>
                                 <div class="card-body">
                                     <a href="">
-                                        <h5 class="card-title">Nike Air Zoom Pegasus 37</h5>
+                                        <h5 class="card-title">Áo Len Collective co</h5>
+                                    </a>
+                                    <p class="card-text">350.000 ₫</p>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 item">
+                        <div class="product-item">
+
+                            <div class="card" style="">
+                                <div class="card-img">
+                                    <a href=""><img src="img/shirt/owen-so-mi.jpg" class="card-img-top" alt="..."></a>
+                                    <div class="add-cart-box">
+                                        <a href="">
+                                            <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                                            THÊM VÀO GIỎ HÀNG
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <a href="">
+                                        <h5 class="card-title">Áo sơ mi Owen</h5>
                                     </a>
                                     <p class="card-text">500.000 ₫</p>
 
@@ -581,7 +589,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <script>
- 
+
     </script>
 </body>
 

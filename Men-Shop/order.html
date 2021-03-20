@@ -118,6 +118,8 @@
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-3 col-form-label"></label>
                                         <div class="col-sm-9">
+                                            <button type="submit" id="btnSubmitLogin"
+                                                class="my-2 btn-login btn w-100">Đăng nhập</button>
                                             <div>Quên mật khẩu? Nhấn tại <a href="#"> đây</a></div>
                                         </div>
 
@@ -125,8 +127,7 @@
                                     <div class="form-group row my-4">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
-                                            <button type="submit" id="btnSubmitLogin"
-                                                class="my-2 btn-login btn w-100">Đăng nhập</button>
+
                                             <button type="button" class="my-2 btn-login-google btn w-100">Đăng nhập bằng
                                                 Google++</button>
                                             <button type="button" class="my-2 btn-login-facebook btn w-100">Đăng nhập
@@ -244,7 +245,61 @@
             </div>
         </div>
     </section>
-
+    <section class="model_checkout">
+       
+          
+          <!-- Modal -->
+          <div class="modal  fade " id="confirmOrder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-checkout">
+              <div class="modal-content">
+               
+                <div class="modal-body ">
+                  <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                  <p class="text-sucess">Đặt hàng thành công</p>
+                  <div class="detail-order">
+                        <div class="check-out">
+                            <span>Mã đơn hàng:</span>
+                            <span>11234</span>
+                        </div>
+                        <div class="check-out">
+                            <span>Khách hàng:</span>
+                            <span>Nguyễn Ngọc Vũ</span>
+                        </div>
+                        <div class="check-out">
+                            <span>Địa chỉ: </span>
+                            <span>12 Trần Thái Tông, Cầu Giấy, Hà Nội</span>
+                        </div class="check-out">
+                        <div class="check-out">
+                            <span>Số điện thoại: </span>
+                            <span>0966247911</span>
+                        </div>
+                        <div class="check-out">
+                            <span>Hình thức thanh toán: </span>
+                            <span>Thanh toán khi nhận hàng</span>
+                        </div>
+                        <p class="text-order">Đơn hàng</p>
+                        <div class="check-out">
+                            <span class="name-product">01 x Áo khoác dài</span>
+                            <span>200.000 đ</span>
+                        </div>
+                        <div class="check-out">
+                            <span class="name-product">01 x Áo khoác dài</span>
+                            <span>200.000 đ</span>
+                            
+                        </div>
+                        <div class="total-order">
+                            <span>Tổng tiền</span>
+                            <span>400.000 đ</span>
+                        </div>
+                        <div class="btn-return">
+                        <a href="index.html" ><span><i class="fas fa-long-arrow-alt-left"></i></span> Quay lại trang chủ</a></div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+    </section>
     <header>
         <div class="header-wellcome">
 
@@ -436,7 +491,7 @@
                                     <div class="form-group">
                                         <label for="numberCard" class="">Số Thẻ:</label>
                                         <input autocomplete="off" type="number" id="numberCard" class="form-control"
-                                            maxlength="16" placeholder="VD: 0451000454383">
+                                            maxlength="16" placeholder="VD: 0451000454383" required minlength="1" maxlength="16">
                                     </div>
                                     <div class="form-group">
                                         <label for="name" class="col-form-label">Tên in trên thẻ:</label>
@@ -448,10 +503,10 @@
                                         <label for="">Ngày hết hạn</label>
                                         <div class="group-input">
                                             <input type="text" id="inputDay" class="form-control" placeholder="Ngày"
-                                                autocomplete="off">
+                                                autocomplete="off" maxlength="2">
                                             <span>/</span>
                                             <input type="text" id="inputMonth" class="form-control" placeholder="Tháng"
-                                                autocomplete="off">
+                                                autocomplete="off" maxlength="2">
 
                                         </div>
                                     </div>
@@ -462,7 +517,7 @@
                                     </div>
                                     <div class="text-center">
 
-                                        <button class="btn btn-primary">Xác Nhận</button>
+                                        <button class="btn btn-success">Xác Nhận</button>
                                     </div>
                                 </form>
                             </div>
@@ -510,7 +565,7 @@
                 
             </div>
             <div class="btn-order">
-                <a href="">Đặt Mua</a>
+                <a href="" data-toggle="modal" data-target="#confirmOrder">Đặt Mua</a>
             </div>
         </div>
         

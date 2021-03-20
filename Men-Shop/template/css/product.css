@@ -175,6 +175,7 @@
     .filter-box-all-active{
         left: 0;
         transition: .5s left;
+        overflow: auto;
     }
     .display-bg-behind-filter{
         position: fixed;
