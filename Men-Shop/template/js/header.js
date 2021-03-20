@@ -179,6 +179,11 @@ $(document).ready(function () {
         return re.test(email);
     }
 
+    $("#btn-login").click(function(){
+        $("#hideContent").removeClass("hide-content");
+        $("#navbar-active").removeClass("active-nav");
+    })
+
 
 
 
